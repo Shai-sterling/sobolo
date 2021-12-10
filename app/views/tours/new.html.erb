@@ -3,43 +3,43 @@
     <div class="tour"> 
 
         <div class="tour-name">
-            <%= form.label :name %>
+            <h4><%= form.label :name %></h4>
             <%= form.text_field :name, placeholder: "Name for your Tour" %>
         </div>
 
         <div class="tour-price"> 
-            <%= form.label :price %>
+            <h4><%= form.label :price %></h4>
             <%= form.text_field :price, placeholder: "Cost of your Tour" %>
         </div>
 
         <div class="tour-duration">
-            <%= form.label :duration %>
-            <%= form.select :duration, [1, 2, 3, 4], class: "duration" %>day(s)
+            <h4><%= form.label :duration %></h4>
+            <%= form.select :duration, [1, 2, 3, 4], class: "duration" %>
         </div>
 
-        <div class="tour-accomodation">
-            <%= form.label :accomodation %>
-            <%= form.select :accomodation, [" ", "Accomodation"] %>
+        <div class="tour-accommodation">
+           <h4> <%= form.label :accommodation %></h4>
+            <%= form.select :accommodation, ["Not available ", "Accomodation"] %>
         </div>
 
         <div class="tour-meals">
-            <%= form.label :meals %>
-            <%= form.select :meals, ["Meals"]  %>
+            <h4><%= form.label :meals %></h4>
+            <%= form.select :meals, ["No meals available", "Meals"]  %>
         </div>
 
         <div class="tour-entry">
-            <%= form.label :entry_tickets %>
-            <%= form.select :entry_tickets, ["Entry tickets"]  %>
+            <h4><%= form.label :entry_tickets %></h4>
+            <%= form.select :entry_tickets, ["N/A","Entry tickets"]  %>
         </div>
 
-        <div class="tour-pick-up">
-            <%= form.label :pick_up, "Pick-up"%>
-            <%= form.select :pick_up, [" ", "Pick-up"]  %>
+        <div class="tour-pickup">
+            <h4><%= form.label :pickup %></h4>
+            <%= form.select :pick_up, ["N/A", "Pick-up"]  %>
         </div>
 
         <div class="tour-transport">
-            <%= form.label :transport %>
-            <%= form.select :transport, ["Transport"]  %>
+            <h4><%= form.label :transport %></h4>
+            <%= form.select :transport, ["Not available", "Transport"]  %>
         </div>
 
         <div class="tour-submit">

@@ -1,0 +1,86 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ .tour {
+    width: 80%;
+    background: rgb(231, 231, 231);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    padding: 20px;
+    height: 60vh;
+    margin: auto;
+
+
+    input[type="text"] {
+        width: 100%;
+        padding: 5px;
+        font-size: 1.1em;
+
+    }
+    
+
+
+    .tour-name {
+        width: 60%;
+        //background: blue;
+
+    }
+
+    .tour-price, 
+    .tour-duration,
+    .tour-accommodation,
+    .tour-meals,
+    .tour-entry,
+    .tour-pickup,
+    .tour-transport {
+        width: 30%;
+        //background: rgb(9, 255, 0);
+        overflow-x: hidden;
+
+        select {
+            padding: 5px;
+            font-size: 1em;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    
+    }
+  
+
+    .tour-submit {
+
+        width: 100%;
+        //background-color: khaki;
+        padding: 5px;
+
+        .tour-btn {
+            padding: 10px;
+            font-size: 1.2em;
+            border: none;
+            color: white;
+            background: rgb(22, 150, 255);
+            width: 150px;
+            border-radius: 5px;
+
+            font-family: 'Arial Narrow', Arial, sans-serif;
+
+        }
+        
+    }
+
+
+ }

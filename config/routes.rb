@@ -4,5 +4,6 @@ Rails.application.routes.draw do
 
 
     resources :tours
+    root "tours#new"
 
 end
