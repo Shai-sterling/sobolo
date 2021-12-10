@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Creating a Tour", type: :system do
+RSpec.describe "Creating a Tour", type: :feature do
   
   scenario "Valid inputs" do
     visit new_tour_path
