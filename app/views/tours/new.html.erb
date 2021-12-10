@@ -6,7 +6,9 @@
 
             <% if @tour.errors.any? %>
                 <% @tour.errors.full_messages_for(:name).each do |message| %>
-                    <%= message %>
+                    <p class="tour-forrm-err">
+                        <%= message %>
+                    </p>      
                 <% end %>
             <% end %>
 
@@ -19,7 +21,9 @@
 
             <% if @tour.errors.any? %>
                 <% @tour.errors.full_messages_for(:price).each do |message| %>
-                    <p><%= message %></p>
+                    <p class="tour-forrm-err">
+                        <%= message %>
+                    </p>               
                 <% end %>
              <% end %>
 
