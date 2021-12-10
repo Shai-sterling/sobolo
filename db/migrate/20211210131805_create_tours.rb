@@ -4,7 +4,7 @@ class CreateTours < ActiveRecord::Migration[6.1]
       t.string "name", null: false
       t.decimal "price", precision: 5, scale: 2, null: false
       t.integer "duration"
-      t.string "accomodation"
+      t.string "accommodation"
       t.string "meals"
       t.string "entry_tickets"
       t.string "pick_up"
