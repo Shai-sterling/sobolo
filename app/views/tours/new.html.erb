@@ -3,13 +3,29 @@
     <div class="tour"> 
 
         <div class="tour-name">
+
+            <% if @tour.errors.any? %>
+                <% @tour.errors.full_messages_for(:name).each do |message| %>
+                    <%= message %>
+                <% end %>
+            <% end %>
+
             <h4><%= form.label :name %></h4>
             <%= form.text_field :name, placeholder: "Name for your Tour" %>
+
         </div>
 
         <div class="tour-price"> 
+
+            <% if @tour.errors.any? %>
+                <% @tour.errors.full_messages_for(:price).each do |message| %>
+                    <p><%= message %></p>
+                <% end %>
+             <% end %>
+
             <h4><%= form.label :price %></h4>
             <%= form.text_field :price, placeholder: "Cost of your Tour" %>
+
         </div>
 
         <div class="tour-duration">

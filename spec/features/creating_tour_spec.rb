@@ -16,5 +16,14 @@ RSpec.describe "Creating a Tour", type: :feature do
   end
   
 
+  scenario "Invalid inputs" do
+    visit new_tour_path
+    click_on "Post Tour"
+    expect(page).to have_content("Name can't be blank")
+    expect(page).to have_content("Price can't be blank")
+    expect(Tour.count).to eq(0)
+
+  end
+
   
 end
