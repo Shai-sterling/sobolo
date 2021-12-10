@@ -2,7 +2,9 @@ class ToursController < ApplicationController
 
 
 
-
+    def index
+        @tours = Tour.all
+    end
 
     def new
         @tour = Tour.new
