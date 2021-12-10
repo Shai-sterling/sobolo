@@ -1,0 +1,51 @@
+<%= form_with model: @tour do  |form| %>
+
+    <div class="tour"> 
+
+        <div class="tour-name">
+            <%= form.label :name %>
+            <%= form.text_field :name, placeholder: "Name for your Tour" %>
+        </div>
+
+        <div class="tour-price"> 
+            <%= form.label :price %>
+            <%= form.text_field :price, placeholder: "Cost of your Tour" %>
+        </div>
+
+        <div class="tour-duration">
+            <%= form.label :duration %>
+            <%= form.select :duration, [1, 2, 3, 4], class: "duration" %>day(s)
+        </div>
+
+        <div class="tour-accomodation">
+            <%= form.label :accomodation %>
+            <%= form.select :accomodation, [" ", "Accomodation"] %>
+        </div>
+
+        <div class="tour-meals">
+            <%= form.label :meals %>
+            <%= form.select :meals, ["Meals"]  %>
+        </div>
+
+        <div class="tour-entry">
+            <%= form.label :entry_tickets %>
+            <%= form.select :entry_tickets, ["Entry tickets"]  %>
+        </div>
+
+        <div class="tour-pick-up">
+            <%= form.label :pick_up, "Pick-up"%>
+            <%= form.select :pick_up, [" ", "Pick-up"]  %>
+        </div>
+
+        <div class="tour-transport">
+            <%= form.label :transport %>
+            <%= form.select :transport, ["Transport"]  %>
+        </div>
+
+        <div class="tour-submit">
+            <%= form.submit "Post Tour", class: "tour-btn" %>
+        </div>
+
+    </div>
+
+<% end %>
