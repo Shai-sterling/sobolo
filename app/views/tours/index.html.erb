@@ -4,6 +4,10 @@
         <% @tours.each do |tour| %>
 
             <div class="tour-card">
+    
+                <div>
+                    <p><%=  tour.description  %></p>  
+                </div>
                 
                 <div>
                     <h2><%= tour.name.capitalize %></h2>
@@ -28,7 +32,7 @@
                     <% else %>
                         <h5><%= tour.duration %> day trip</h5>
                     <% end %>
-                    
+
                 </div>
 
                 <div>
