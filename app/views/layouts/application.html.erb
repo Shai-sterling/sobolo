@@ -6,6 +6,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+
+    
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -13,21 +15,25 @@
   <body>
 
 
-  <nav>
-    <%= image_tag("sobolo.png", class: "logo", alt: "logo" ) %>
+  <nav class="wrap">
     <div class="nav-links">
-      <ul class="nav-link-list">
+      <%= image_tag("sobolo.png", class: "logo", alt: "logo" ) %>
+      <ul class="nav-links">
         <li class="nav-list-item"><%= link_to "Home", root_path %></li>
         <li class="nav-list-item">Contact us</li>
         <li class="nav-list-item">About us</li>
         <li class="nav-list-item"><%= link_to "New tour", new_tour_path %></li>
         <li class="nav-list-item"><%= link_to "Tours", tours_path %></li>
-       
       </ul>
     </div>
   </nav>
 
 
     <%= yield %>
+
+
+    <%= javascript_pack_tag "my_js.js" %>
+
+    
   </body>
 </html>

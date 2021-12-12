@@ -1,4 +1,22 @@
    
+
+
+
+      
+<div class="hero-container">
+    <div class="hero-background"></div>
+    <div class="hero-text">
+        <h1>Discover Ghana with the locals</h1>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus consectetur illo doloremque architecto et itaque sunt, odio voluptate in libero voluptatum ex magnam cum aut enim excepturi autem rerum eum?</P>
+        <button class="hero-text-btn">View Tours</button>
+        <button class="hero-text-btn">View Tours 3</button>   
+    </div> 
+</div>
+
+
+
+
     <div class="tour-card-wrapper">
 
         <% @tours.each do |tour| %>
@@ -6,7 +24,7 @@
             <div class="tour-card">
     
                 <div>
-                    <p><%=  tour.description  %></p>  
+                    <%= tour.description.to_plain_text %>
                 </div>
                 
                 <div>
@@ -52,3 +70,10 @@
         <% end %>
 
     </div>
+
+
+
+
+
+
+    
