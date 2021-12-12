@@ -14,6 +14,81 @@
  *= require_self
  */
 
+//----------nav---------//
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "arpona", sans-serif;  
+}
+
+
+nav {
+
+    display: flex;
+    align-items: center;
+    position: fixed;
+    background: rgb(245, 245, 245);
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 10px;
+    opacity: 0.8;
+    
+
+    img {
+        max-height: 50px;
+
+    }
+
+    .nav-links {
+        width:100%;
+
+        ul {
+            text-align: end;
+
+            li  {
+                list-style: none;
+                color: rgb(15, 15, 15);
+                display: inline;
+                cursor: pointer;
+                margin: 5px;
+                font-size: 1em;
+
+            }
+            a:visited {
+                color: rgb(10, 10, 10);
+
+            }
+           
+        }
+        
+        
+        .signup-button {
+            border: 1px rgb(0, 0, 0) solid;
+            border-radius: 10px;
+            padding: 5px;
+            font-size: 18px;
+            margin-left: 5px;
+        }
+        
+        .login-button{
+            border-radius: 10px;
+            background: rgb(136, 208, 255);
+            font-size: 18px;
+            padding: 5px;
+            border: 1px rgb(0, 0, 0) solid;
+            margin-left: 5px;
+        }
+    }
+
+   
+
+}
+
 
  //-----------Tour  new form ----------//
  .tour {
