@@ -52,34 +52,28 @@
 
         <div class="tour-accommodation">
            <h4> <%= form.label :accommodation %></h4>
-            <%= form.select :accommodation, ["Not available ", "Accomodation"] %>
+            <%= form.radio_button :accommodation, true  %>
         </div>
 
         <div class="tour-meals">
             <h4><%= form.label :meals %></h4>
-            <%= form.select :meals, ["No meals available", "Meals"]  %>
+            <%= form.radio_button :meals, true %>
         </div>
 
         <div class="tour-entry">
             <h4><%= form.label :entry_tickets %></h4>
-            <%= form.select :entry_tickets, ["N/A","Entry tickets"]  %>
+            <%= form.radio_button :entry_ticketsickets, true  %>
         </div>
 
         <div class="tour-pickup">
             <h4><%= form.label :pickup %></h4>
-            <%= form.select :pick_up, ["N/A", "Pick-up"]  %>
+            <%= form.radio_button :pick_up, true %>
         </div>
 
         <div class="tour-transport">
             <h4><%= form.label :transport %></h4>
-            <%= form.select :transport, ["Not available", "Transport"]  %>
+            <%= form.radio_button :transport, true %>
         </div>
-<!-- 
-        <div class="">
-            <h4><%= form.label :description %></h4>
-            <%= form.rich_text_area :description %>
-
-        </div> -->
 
         <div class="tour-submit">
             <%= form.submit "Post Tour", class: "tour-btn" %>
