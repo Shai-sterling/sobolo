@@ -242,13 +242,29 @@
 }
 
 .tour-card {
-    background: rgb(32, 121, 121);
+    background: rgb(226, 226, 226);
     width: 30%;
-    height: 300px;
-    overflow-x: hidden;
     margin: 10px;
+    overflow: hidden;
+
+
+    .tour-card-details {
+       // background: lightblue;
+        padding: 10px;
+        font-size: 1.2em;
+
+        .tour-card-item {
+            //background: lightcoral;
+            padding: 3px;
+
+        }
+    }
 
 }
+#tour-name {
+    color: rgba(6, 221, 6, 0.753);
+}
+
 
 
 

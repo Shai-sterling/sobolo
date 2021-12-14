@@ -32,50 +32,48 @@
         <% @tours.each do |tour| %>
     
             <div class="tour-card">
-    
-                <!-- <div>
-                    <%#= tour.description %>
+                <div class="tour-card-details">
+                        <div>
+                            <%#= tour.description %>
+                        </div>
+
+                        <div class="tour-card-item" id="tour-name">
+                            <h2><%= tour.name.capitalize %></h2>
+                        </div>
+                        
+                        <div class="tour-card-item">
+                            <h5><%= tour.price %></h5>
+                        </div> 
+                        <div class="tour-card-item">
+                            <h5><%= tour.accommodation? ? "Accommodation" : "No cccommodation" %></h5>
+                        </div>
+            
+                        <div class="tour-card-item">
+                            <h5><%= tour.transport? ? "Transport" : "No transport" %></h5>   
+                        </div>
+            
+                        <div class="tour-card-item">
+                            <h5> <%= tour.entry_tickets %> <%= tour.entry_tickets? ? "Fees" : "No fees" %></h5>
+                        </div>
+            
+                        <div class="tour-card-item">
+            
+                            <h5> <%= tour.duration > 1 ? "#{tour.duration}  Days trip" : "Day trip" %> </h5>
+   
+                        </div>
+            
+                        <div class="tour-card-item">
+                            <h5><%= tour.meals? ? "Meals" : "No meals" %></h5>
+                        </div>
+            
+                        <div class="tour-card-item">
+                            <h5><%= tour.pick_up? ? "Pickup" : "No pickup" %></h5>
+                        </div>
+            
+                        
+                    </div>
+
                 </div>
-                 -->
-                <div>
-                    <h2><%= tour.name.capitalize %></h2>
-                </div>
-    
-                <div>
-                    <h5><%= tour.price %></h5>
-                </div>
-    
-                <div>
-                    <h5><%= tour.transport %></h5>   
-                </div>
-    
-                <div>
-                    <h5><%= tour.entry_tickets %></h5>
-                </div>
-    
-                <div>
-    
-                    <% if tour.duration > 1 %>
-                        <h5><%= tour.duration %> days trip</h5>
-                    <% else %>
-                        <h5><%= tour.duration %> day trip</h5>
-                    <% end %>
-    
-                </div>
-    
-                <div>
-                    <h5><%= tour.meals %></h5>
-                </div>
-    
-                <div>
-                    <h4><%= tour.pick_up %></h5>
-                </div>
-    
-                <div>
-                    <h5><%= tour.accommodation %></h5>
-                </div>
-                
-            </div>
     
         <% end %>
     
