@@ -30,7 +30,7 @@
 .wrap {
     width: 100%;
     position: fixed;
-    background: rgb(248, 248, 248);
+    background: rgb(255, 255, 255);
     top: 0;
     z-index: 10;
     opacity: 0.97;
@@ -231,12 +231,23 @@
 }
 
 
-
+.tour-container {
+    width: 100%;
+    background: chocolate;
+    display: flex;
+    flex-wrap: wrap;
+    // padding: 20px;
+    // margin: auto;
+}
 
  .tour-card {
      background: red;
      width: 30%;
-     height: 500px;
+     height: 300px;
+     overflow-x: hidden;
+margin-left: auto;
+margin-right: auto;
+
  }
 
 
