@@ -63,18 +63,21 @@
 
             </div> 
                 
+            
+            <div id="read-more">
+                <%= link_to "Read more ", tour_path(tour), class: "read-more" %>
+            </div>
                             
             <div class="tour-card-item", id="tour-price">
                 
-                <p><%= tour.price %></p>
+                <p><%= number_to_currency(tour.price, unit: "€" ) %></p>
                     
             </div> 
             
-            <div>
-                <%= link_to "Read more ", tour_path(tour) %>
-            </div>
-
             
+
+
+
         </div>
         <% end %>
         
@@ -82,7 +85,6 @@
 
 
 
-    <%= link_to"bra ha"%>
 
 <div id="find-team" class="find-team">
     <%= image_tag "colors.png", alt: "colors" %>
