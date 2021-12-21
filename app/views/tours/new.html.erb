@@ -74,6 +74,10 @@
             <h4><%= form.label :transport %></h4>
             <%= form.radio_button :transport, true %>
         </div>
+        <div class="tour-description">
+            <h4><%= form.label :description %></h4>
+            <%= form.text_field :description %>
+        </div>
 
         <div class="tour-submit">
             <%= form.submit "Post Tour", class: "tour-btn" %>

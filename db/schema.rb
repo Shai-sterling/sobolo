@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2021_12_10_131805) do
     t.boolean "entry_tickets"
     t.boolean "pick_up"
     t.boolean "transport"
+    t.text "description", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

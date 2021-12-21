@@ -8,7 +8,6 @@ class ToursController < ApplicationController
 
     def new
         @tour = Tour.new
-
     end
 
     def create
@@ -18,6 +17,18 @@ class ToursController < ApplicationController
         else
             render :new
         end
+    end
+
+
+
+    def show 
+
+
+       @tour = Tour.find(params[:id])
+
+        
+
+
     end
 
 
@@ -32,7 +43,7 @@ class ToursController < ApplicationController
   
 
     def tour_params
-        params.require(:tour).permit(:name, :price, :duration, :accommodation, :meals, :entry_tickets, :pick_up, :transport)
+        params.require(:tour).permit(:name, :price, :duration, :accommodation, :meals, :entry_tickets, :pick_up, :transport, :description)
     end
 
 

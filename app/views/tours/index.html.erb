@@ -69,14 +69,20 @@
                 <p><%= tour.price %></p>
                     
             </div> 
+            
+            <div>
+                <%= link_to "Read more ", tour_path(tour) %>
+            </div>
 
+            
         </div>
+        <% end %>
+        
+    </div>
 
-    <% end %>
-
-</div>
 
 
+    <%= link_to"bra ha"%>
 
 <div id="find-team" class="find-team">
     <%= image_tag "colors.png", alt: "colors" %>

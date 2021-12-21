@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe "Creating a Tour", type: :feature do
+RSpec.describe "Creating a Tour", type: :system do
   
   scenario "Valid inputs" do
     visit new_tour_path
     fill_in "Name", with: "Dennis"
     fill_in "Price", with: "200"
-    #fill_in "Description", with: "This is a description"
+    fill_in "Description", with: "This is a description"
     click_on "Post Tour"
     visit tours_path
     expect(page).to have_content("Dennis")
@@ -24,6 +24,12 @@ RSpec.describe "Creating a Tour", type: :feature do
     expect(Tour.count).to eq(0)
 
   end
+
+
+
+
+
+
 
   
 end

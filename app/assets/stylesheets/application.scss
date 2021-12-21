@@ -356,6 +356,97 @@ body {
 
 }
 
+
+
+// tour show //
+
+
+
+.tour-show-photo {
+
+//background-color: rgb(124, 9, 9);
+ display: flex;
+justify-content: space-between; 
+flex-wrap: wrap;
+margin-top: 100px;
+padding: 20px 100px;
+
+ 
+ img {
+    max-width: 60%;
+     border-radius: 5px;
+     min-width: 700px;
+     height: 400px;
+
+
+ }
+
+
+
+    #show-tour-description {
+
+       // background-color: rgb(207, 17, 17) !important;
+
+        width: 35%;
+        overflow-y: scroll;
+        align-content: flex-start;
+
+
+
+    }
+
+        
+        
+
+    .tour-region {
+        font-size: 2em;
+        color: #ED6749;
+        margin-bottom: 10px;
+    }
+
+
+
+    .show-tour-details{
+    //background: #ED6749;
+    width: 100%;
+        margin-top: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px;
+
+        div {
+            padding: 10px;
+            
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 footer {
     padding: 40px;
     background: rgb(0, 0, 0);

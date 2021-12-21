@@ -9,6 +9,8 @@ class CreateTours < ActiveRecord::Migration[6.1]
       t.boolean "entry_tickets"
       t.boolean "pick_up"
       t.boolean "transport"
+      t.text "description", null: false
+
 
 
       t.timestamps

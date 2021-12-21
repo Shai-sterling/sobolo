@@ -1,0 +1,71 @@
+
+<div class="tour-show-photo">
+
+    <%= image_tag "rock.jpeg" %>
+
+    
+    <div id="show-tour-description" class="show.tour-description">
+        <p class="tour-region"> <%= @tour.name.capitalize %> Region</p>
+        <p><%= @tour.description %></p>
+    </div>
+
+
+
+    <div class="show-tour-details">
+
+        <div class="show-price">
+            <%= @tour.price  %>
+        </div>
+
+        <div class="show-price">
+             <%= @tour.duration > 1 ? "#{tour.duration}  days trip" : " 1 day trip" %>
+
+    
+        </div>
+        <div class="show-price">
+            <%= @tour.meals? ? "Meals" : "No meals available" %>
+        </div>
+        <div class="show-price">
+            <%= @tour.entry_tickets? ? "Tickets" : "No Tickets"  %>
+        </div>
+       
+        <div class="show-accommodation">
+            <%= @tour.accommodation? ? "Accommodation" : "No accommodation provided" %>
+        </div>
+
+        <div class="show-pickup">
+            <%= @tour.pick_up? ? "Pick" : "No pickup available"%>
+        </div>
+
+        <div class="show-transport">
+                <%= @tour.transport? ? "Transport" : "No transport available" %> 
+        </div>
+        
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div>
+    <%= link_to "edit" %>
+    <%= link_to "delete" %>
+    <%= link_to "back" %>
+</div>
