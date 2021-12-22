@@ -314,7 +314,6 @@ body {
         padding: 10px;
         //background: greenyellow;
     }
-
     
 }
 
@@ -419,17 +418,13 @@ padding: 20px 100px;
 
 
     .show-tour-details{
-    //background: #ED6749;
-    width: 100%;
         margin-top: 80px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 10px;
-
         div {
             padding: 10px;
             
+            margin: 10px;
         }
     }
 

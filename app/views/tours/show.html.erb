@@ -14,25 +14,26 @@
     <div class="show-tour-details">
 
         <div class="show-price">
-            <i class="fas fa-money-check-alt"></i>            <%= number_to_currency(@tour.price, unit: "€" )  %>
+            <i class="fas fa-money-check-alt"></i><%= number_to_currency(@tour.price, unit: "€" )  %>
         </div>
 
         <div class="show-price">
             <i class="fas fa-cloud-sun" ></i>
-
              <%= @tour.duration > 1 ? "#{tour.duration}  days trip" : " 1 day trip" %>
         </div>
+
         <div class="show-price">
             <i class="fas fa-hamburger"></i>
             <%= @tour.meals? ? "Meals" : "No meals available" %>
         </div>
+        
         <div class="show-price">
             <i class="fas fa-ticket-alt"></i>
             <%= @tour.entry_tickets? ? "Tickets" : "No Tickets"  %>
         </div>
        
         <div class="show-accommodation">
-            <i class="fas fa-home"></i><%= @tour.accommodation? ? "Accommodation" : "No accommodation provided" %>
+            <i class="fas fa-home"></i><%= @tour.accommodation? ? "Accommodation" : "No accommodation " %>
         </div>
 
         <div class="show-pickup">
@@ -41,7 +42,7 @@
         </div>
 
         <div class="show-transport">
-            <i class="fas fa-bus"></i>    <%= @tour.transport? ? "Transport" : "No transport available" %> 
+            <i class="fas fa-bus"></i>    <%= @tour.transport? ? "Transport" : "No transport " %> 
         </div>
         
 
