@@ -27,7 +27,9 @@
 
         <div class="tour-card" >
 
-                <%= image_tag "rock.jpeg" %>
+            <% if tour.image? %>
+             <%= image_tag(tour.image.url(:full)) %>
+            <% end %>
 
             <div class="" id="tour-name">
                 <p class="tour-name"><%= tour.name.capitalize %></p>
