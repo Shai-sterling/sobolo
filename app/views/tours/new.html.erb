@@ -78,6 +78,11 @@
             <h4><%= form.label :description %></h4>
             <%= form.text_field :description %>
         </div>
+        <div class="tour-description">
+            <h4><%= form.label :add_image %></h4>
+            <%= form.file_field :image, multiple: true %>
+
+        </div>
 
         <div class="tour-submit">
             <%= form.submit "Post Tour", class: "tour-btn" %>

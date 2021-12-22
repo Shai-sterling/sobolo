@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'carrierwave', '~> 2.0'
 
+gem 'mini_magick'
 
 
 
