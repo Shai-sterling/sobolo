@@ -10,11 +10,10 @@
         <p><%= @tour.description %></p>
 
 <br>
-<br>
-<br>
+
         <div>
             <%= link_to "edit", edit_tour_path(@tour) %>
-            <%= link_to "delete" %>
+            <%= link_to "delete", tour_path(@tour), method: :delete, data: { confirm: "are you sure?"} %>
             <%= link_to "back" %>
         </div>
     </div>

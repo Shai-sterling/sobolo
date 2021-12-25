@@ -51,6 +51,16 @@ class ToursController < ApplicationController
 
 
 
+    def destroy
+        @tour = Tour.find(params[:id])
+        @tour.destroy
+        redirect_to root_path
+        
+            
+    end
+
+
+
 
 
 
