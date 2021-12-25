@@ -34,6 +34,13 @@ class ToursController < ApplicationController
 
 
 
+    def edit 
+
+
+    end 
+
+
+
 
 
 

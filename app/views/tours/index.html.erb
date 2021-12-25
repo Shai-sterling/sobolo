@@ -62,8 +62,7 @@
                     <p><%= tour.pick_up? ? "Pickup" : "No pickup" %></p>
                 </div> -->
 
-            </div> 
-                
+            </div>  
             
             <div id="read-more">
                 <%= link_to "Read more ", tour_path(tour), class: "read-more" %>
@@ -74,15 +73,11 @@
                 <p><%= number_to_currency(tour.price, unit: "€" ) %></p>
                     
             </div> 
-            
-            
-
-
-
-        </div>
-        <% end %>
         
-    </div>
+        </div>
+    <% end %>
+        
+</div>
 
 
 

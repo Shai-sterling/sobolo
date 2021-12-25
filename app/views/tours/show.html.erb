@@ -8,6 +8,15 @@
     <div id="show-tour-description" class="show.tour-description">
         <p class="tour-region"> <%= @tour.name.capitalize %> Region</p>
         <p><%= @tour.description %></p>
+
+<br>
+<br>
+<br>
+        <div>
+            <%= link_to "edit", edit_tour_path(@tour) %>
+            <%= link_to "delete" %>
+            <%= link_to "back" %>
+        </div>
     </div>
 
 
@@ -64,8 +73,6 @@
         <% end %>   
     <% end %>
 
-
-
 </div>
 
 
@@ -86,8 +93,3 @@
 <br>
 <br>
 
-<div>
-    <%= link_to "edit" %>
-    <%= link_to "delete" %>
-    <%= link_to "back" %>
-</div>
