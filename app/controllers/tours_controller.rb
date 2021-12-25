@@ -35,6 +35,7 @@ class ToursController < ApplicationController
 
 
     def edit 
+        @tour = Tour.find(params[:id])
 
 
     end 
