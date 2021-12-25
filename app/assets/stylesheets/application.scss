@@ -429,8 +429,44 @@ padding: 20px 100px;
     }
 
 
+
+
+
+
+
+
+    .tour-show-gallery {
+        border: 1px solid red;
+       
+    }
+
+
+
+    
+    
 }
 
+.tour-gallery-wrapper {
+
+    //background-color: hotpink ;
+    display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+
+
+    img {
+     
+        border-radius: 5px;
+        margin: 10px;
+        width: 400px;  
+        height: 300px;   
+        /* Safari seems to support, but seems deprecated and does the same thing as the others. */
+        image-rendering: -webkit-optimize-contrast;    
+    }
+
+
+   
+}
 
 
 

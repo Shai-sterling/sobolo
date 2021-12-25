@@ -26,9 +26,8 @@
     <% @tours.each do |tour| %>
 
         <div class="tour-card" >
-
-            <% if tour.image? %>
-             <%= image_tag(tour.image.url(:full)) %>
+            <% if tour.images.attached? %>
+                <%= image_tag tour.images.first %>
             <% end %>
 
             <div class="" id="tour-name">

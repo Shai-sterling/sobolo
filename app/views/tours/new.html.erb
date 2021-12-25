@@ -2,14 +2,6 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 <%= form_with model: @tour do  |form| %>
 
@@ -23,9 +15,11 @@
                         <%= message %>
                     </p>      
                 <% end %>
+
             <% end %>
 
             <h4><%= form.label :name %></h4>
+
             <%= form.text_field :name, placeholder: "Name for your Tour" %>
 
         </div>
@@ -33,14 +27,17 @@
         <div class="tour-price"> 
 
             <% if @tour.errors.any? %>
+
                 <% @tour.errors.full_messages_for(:price).each do |message| %>
                     <p class="tour-forrm-err">
                         <%= message %>
                     </p>               
                 <% end %>
-             <% end %>
+
+            <% end %>
 
             <h4><%= form.label :price %></h4>
+
             <%= form.text_field :price, placeholder: "Cost of your Tour" %>
 
         </div>
@@ -74,12 +71,27 @@
             <h4><%= form.label :transport %></h4>
             <%= form.radio_button :transport, true %>
         </div>
+
         <div class="tour-description">
+
+            <% if @tour.errors.any? %>
+
+            <% @tour.errors.full_messages_for(:description).each do |message| %>
+                <p class="tour-forrm-err">
+                    <%= message %>
+                </p>               
+            <% end %>
+
+        <% end %>
+
             <h4><%= form.label :description %></h4>
             <%= form.text_field :description %>
         </div>
+
         <div class="tour-description">
-            <%= form.file_field :image %>
+            <h4><%= form.label :images %></h4>
+
+            <%= form.file_field :images, multiple: true %>
 
         </div>
 
