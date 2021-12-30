@@ -3,9 +3,8 @@
 <div class="hero-container">
     <div class="hero-background"></div>
     <div class="hero-text">
-        <p>Discover Ghana with the locals</p>
-        <br>
-        <br>
+        <p class="discover-text">Discover Ghana with the locals</p>
+      
         <button class="hero-text-btn" >view tours</button>
     </div> 
 </div>
@@ -15,8 +14,8 @@
 <div id="find-tours" class="find-tour">
     <%= image_tag "colors.png", alt: "colors" %>
     <p class="adventure">Find your next adventure </p>
-    <p>Our tours are designed for small groups of 4-5 people, so that we can keep them flexible and tailor them for you along the way. </p>
-    <p>From the pick-up at your accomodation we will take care of every aspect of the tour, so you don’t need to carry a cent with you.</p>
+    <p class="adventure-text">Our tours are designed for small groups of 4-5 people, so that we can keep them flexible and tailor them for you along the way. </p>
+    <p class="adventure-text"> From the pick-up at your accomodation we will take care of every aspect of the tour, so you don’t need to carry a cent with you.</p>
 </div> 
 
 
@@ -61,6 +60,9 @@
                 <div class="tour-card-item">
                     <p><%= tour.pick_up? ? "Pickup" : "No pickup" %></p>
                 </div> -->
+                <div class="tour-card-item" style="">
+                    <p><%= tour.description.truncate(80) %></p>
+                </div> 
 
             </div>  
             
@@ -85,8 +87,8 @@
 <div id="find-team" class="find-team">
     <%= image_tag "colors.png", alt: "colors" %>
     <p class="adventure">Meet our team </p>
-    <p>Our tours are designed for small groups of 4-5 people, so that we can keep them flexible and tailor them for you along the way. </p>
-    <p>From the pick-up at your accomodation we will take care of every aspect of the tour, so you don’t need to carry a cent with you.</p>
+    <p class="adventure-text">Our tours are designed for small groups of 4-5 people, so that we can keep them flexible and tailor them for you along the way. </p>
+    <p class="adventure-text">From the pick-up at your accomodation we will take care of every aspect of the tour, so you don’t need to carry a cent with you.</p>
 </div> 
 
 
@@ -102,6 +104,7 @@
         <p>Our tours are designed for small groups of 4-5 people, so that we can keep them flexible and tailor them for you along the way.</p>
         <p>From the pick-up at your accomodation we will take care of every aspect of the tour, so you don’t need to carry a cent with you.</p>
     </div>
+    
     <div class="team">
         <%= image_tag"team.png" %>
         <h4>Amount</h4>

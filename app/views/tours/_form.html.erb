@@ -7,9 +7,7 @@
 <br>
 
 <%= form_with model: @tour do  |form| %>
-
     <div class="tour"> 
-
         <div class="tour-name">
 
             <% if @tour.errors.any? %>
@@ -22,9 +20,7 @@
             <% end %>
 
             <h4><%= form.label :name %></h4>
-
             <%= form.text_field :name, placeholder: "Name for your Tour" %>
-
         </div>
 
         <div class="tour-price"> 
@@ -40,9 +36,7 @@
             <% end %>
 
             <h4><%= form.label :price %></h4>
-
             <%= form.text_field :price, placeholder: "Cost of your Tour" %>
-
         </div>
 
         <div class="tour-duration">
@@ -93,9 +87,7 @@
 
         <div class="tour-description">
             <h4><%= form.label :images %></h4>
-
             <%= form.file_field :images, multiple: true %>
-
         </div>
 
         <div class="tour-submit">
@@ -103,5 +95,4 @@
         </div>
 
     </div>
-
 <% end %>
