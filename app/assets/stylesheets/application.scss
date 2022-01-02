@@ -28,6 +28,7 @@
 body {
     
     font-family: 'Montserrat', sans-serif;
+    background-color: #fafafa;
    
 }
 
@@ -40,7 +41,7 @@ body {
 
  width: 100%;
     position: fixed;
-    background: rgb(255, 255, 255);
+background: rgb(255, 255, 255);
     top: 0;
     z-index: 10;
     //opacity: 0.97;
@@ -50,10 +51,14 @@ body {
     
     
     .nav-links {
-
+        width: 80%;
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: space-between !important;
         align-items: center;
+        
+        margin: auto;
+        //background-color: crimson;
 
         a {
             text-decoration: none;
@@ -69,21 +74,31 @@ body {
 
             max-height: 50px;
             max-width: 40%; 
+           // background-color: cornflowerblue;
         }
             
-        li  {
+
+         ul {
+            // background: chocolate;
+             padding: 10px;
+
+             li  {
+     
+     
+                 list-style: none;
+                 color: rgb(15, 15, 15);
+                 display: inline;
+                 cursor: pointer;
+                 padding: 5px;
+                 margin: 5px 10px; 
+                 font-size: 1.2em;
+                 font-weight: 500; 
+                 // background: yellowgreen;
+     
+             }
+         }
 
 
-            list-style: none;
-            color: rgb(15, 15, 15);
-            display: inline;
-            cursor: pointer;
-            padding: 5px;
-            margin: 5px 10px; 
-            font-size: 1.2em;
-            font-weight: 500;  
-
-        }
                
     
     
@@ -115,20 +130,22 @@ body {
 .tour {
 
     width: 80%;
-    background: rgb(231, 231, 231);
+    background: rgb(236, 236, 236);
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
     justify-content: space-between;
     padding: 20px;
     margin: auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    height: 78vh;
 
 
     input[type="text"] {
 
         width: 100%;
         padding: 5px;
-        font-size: 1.1em;
 
     }
     
@@ -136,7 +153,6 @@ body {
 
         color: red;
         font-size: 1.2em;
-        font-style: italic;
     }
 
     .tour-name {
@@ -160,7 +176,6 @@ body {
         select {
 
             padding: 5px;
-            font-size: 1em;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
@@ -175,7 +190,6 @@ body {
         .tour-btn {
 
             padding: 10px;
-            font-size: 1.2em;
             border: none;
             color: white;
             background: rgb(22, 150, 255);
@@ -218,7 +232,7 @@ body {
         position: absolute;
         top: 110px ;
        //background-color: #ED6749;
-        width: 100%;
+        width: 80%;
         
       
     }
@@ -229,7 +243,6 @@ body {
         font-family: 'Montserrat', sans-serif;
         font-size: 4em;
         font-weight: 500;
-        letter-spacing: 1px;
 
     }
        
@@ -262,27 +275,29 @@ body {
 //  Find tours on Index //
 
 .find-tour, .find-team{
-    
+
+    //background-color: rgb(66, 142, 241);
+    width: 80%;
     color: rgb(10, 10, 10);
     text-align: center;
-    padding: 30px 0;
+    margin: auto;
+    padding: 80px 0px;
 
     img {
         width: 100px;
-        background: center;   
+        background: center;
+        margin-bottom: 15px;
+   
     }
    
     .adventure{
         font-size: 2.4em;
         color: #ED6749;
-        margin-bottom: 5px;
+        margin-bottom: 15px;
     }
     
     .adventure-text {
-        font-weight: lighter;
-    font-style: normal;
-      margin: 10px;
-      font-size: 1.3em;
+        line-height: 27px;
     }
    
 }
@@ -291,24 +306,24 @@ body {
 // Tour container and Cards //
 
 .tour-container {
-width: 100%;
-    background: #FAFAFA;
+    width: 80%;
+   // background: #e95d5d;
     display: flex;
     flex-wrap: wrap;
-    // margin: auto;
-    justify-content: space-evenly;
+    justify-content: space-between;
+     margin: auto;
+     padding: 80px 0px;
    
 }
 
 .tour-card {
 
-    //background: rgb(25, 117, 255);
+    background: rgb(255, 255, 255);
     width: 30%;
-    min-width: 300px;
+    min-width: 350px;
     overflow: hidden;
     border-radius: 5px;
-    border: solid 1px rgb(233, 233, 233);
-    margin: 20px;
+    box-shadow: 1px 2px 13px 2px rgba(0, 0, 0, 0.15);
 
     img {
 
@@ -321,26 +336,29 @@ width: 100%;
         image-rendering: -webkit-optimize-contrast;
     }
 
-    .tour-card-details {
-        padding: 10px 20px;
-        //padding: 10px;
-        line-height: 20px;
-    }
-
+    
     #tour-name {
-
+        
         color: #000;
         padding: 5px 20px;
         letter-spacing: 2px;
         font-size: 2em;
         font-weight: 500;
     }
-
+    
     .tour-sites {
         padding: 0 20px;
         font-size: 1.1em;
         font-weight: 500;
         line-height: 24px;
+    }
+
+    .tour-card-details {
+        padding: 30px 20px 0px 20px ;
+        //padding: 10px;
+        line-height: 28px;
+
+        
     }
 
     .tour-card-item {
@@ -362,42 +380,44 @@ width: 100%;
        
 
     #read-more {
-    // background: hotpink;
-        padding: 10px;
+        //background: hotpink;
+        padding: 0px 20px 5px 20px;
+
+
+     
     }
 
-    .read-more {
-        padding: 10px;
-        //background: greenyellow;
-    }
     
 }
 
 
 
 .team-wrapper {
-
+width: 80%;
+margin: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
     //background: url("coconuts.png");
     background-position: center;
     background-repeat: no-repeat ;
     background-size: cover;
-    background-color: green;
+  //  background-color: #bebcbc;
+    padding: 80px 0px;
     
 
 }
 
 .team {
 
+    
     background: white;
     text-align: center;
     padding: 20px;
-    margin: 20px;
-    max-width: 350px;
-
+    width: 30%;
+    min-width: 300px;
+    box-shadow: 1px 2px 13px 2px rgba(0, 0, 0, 0.15);
+    margin: 10px;
     img {
         width: 50%;
         margin-bottom: 5px;
@@ -413,7 +433,7 @@ width: 100%;
 
 .tour-show-photo {
 
-    //background-color: rgb(124, 9, 9);
+    background-color: rgb(124, 9, 9);
     display: flex;
     justify-content: space-evenly; 
     flex-wrap: wrap;
@@ -523,7 +543,10 @@ width: 100%;
 
 
 footer {
-    padding: 40px;
-    background: rgb(0, 0, 0);
+    padding: 50px 40px;
+    background-color: #57254D;
     color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
 }

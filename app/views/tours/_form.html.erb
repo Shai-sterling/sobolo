@@ -1,10 +1,5 @@
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 
 <%= form_with model: @tour do  |form| %>
     <div class="tour"> 
@@ -19,7 +14,7 @@
 
             <% end %>
 
-            <h4><%= form.label :name %></h4>
+            <p><%= form.label :name %></p>
             <%= form.text_field :name, placeholder: "Name for your Tour" %>
         </div>
 
