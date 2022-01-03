@@ -1,82 +1,89 @@
+<div class="tour-show-wrapper">
 
-<div class="tour-show-photo">
+    <div class="tour-show-photo">
 
-    <% if @tour.images.attached? %>
-        <%= image_tag @tour.images.first %>
-    <% end %>
-    
-    <div id="show-tour-description" class="show.tour-description">
-        <p class="tour-region"> <%= @tour.name.capitalize %> Region</p>
-        <p><%= @tour.description %></p>
-
-<br>
-
-        <div>
-            <%= link_to "edit", edit_tour_path(@tour), class: "edit-btn" %>
-            <%= link_to "delete", tour_path(@tour), method: :delete, data: { confirm: "are you sure?"}, class:"delete-btn" %>
-            <%= link_to "back", tours_path %>
-        </div>
-    </div>
-
-
-
-    <div class="show-tour-details">
-
-        <div class="show-price">
-            <i class="fas fa-money-check-alt"></i><%= number_to_currency(@tour.price, unit: "€" )  %>
-        </div>
-
-        <div class="show-price">
-            <i class="fas fa-cloud-sun" ></i>
-             <%= @tour.duration > 1 ? "#{tour.duration}  days trip" : " 1 day trip" %>
-        </div>
-
-        <div class="show-price">
-            <i class="fas fa-hamburger"></i>
-            <%= @tour.meals? ? "Meals" : "No meals available" %>
-        </div>
+        <% if @tour.images.attached? %>
+            <%= image_tag @tour.images.first %>
+        <% end %>
         
-        <div class="show-price">
-            <i class="fas fa-ticket-alt"></i>
-            <%= @tour.entry_tickets? ? "Tickets" : "No Tickets"  %>
-        </div>
-       
-        <div class="show-accommodation">
-            <i class="fas fa-home"></i><%= @tour.accommodation? ? "Accommodation" : "No accommodation " %>
-        </div>
-
-        <div class="show-pickup">
-            <i class="fas fa-truck-pickup"></i>
-            <%= @tour.pick_up? ? "Pickup" : "No pickup available"%>
-        </div>
-
-        <div class="show-transport">
-            <i class="fas fa-bus"></i> <%= @tour.transport? ? "Transport" : "No transport " %> 
-        </div>
-        
-
-    </div>
-
-</div>
+        <div id="show-tour-description" class="show-tour-description">
+            <p class="tour-region"> <%= @tour.name.capitalize %> Region</p>
 
 
-<!-- <div class="tour-gallery-wrapper">
-
-    <% if @tour.images.attached? %>
-        <%  @tour.images.each do |image| %>
-    
-            <div class="tour-show-gallery">
-                <%= image_tag image %>
+            <div class="description-text">
+                <%= @tour.description %>
             </div>
     
-        <% end %>   
-    <% end %>
+            <div class="tour-show-btn-wrapper">
+                <%= link_to "edit", edit_tour_path(@tour), class: "edit-btn" %>
+                <%= link_to "delete", tour_path(@tour), method: :delete, data: { confirm: "are you sure?"}, class:"delete-btn" %>
+                <%= link_to "back", tours_path %>
+            </div>
+            
+        </div>
+    
+    
+    
+        <!-- <div class="show-tour-details">
+    
+            <div class="show-price">
+                <i class="fas fa-money-check-alt"></i><%= number_to_currency(@tour.price, unit: "€" )  %>
+            </div>
+    
+            <div class="show-price">
+                <i class="fas fa-cloud-sun" ></i>
+                 <%= @tour.duration > 1 ? "#{tour.duration}  days trip" : " 1 day trip" %>
+            </div>
+    
+            <div class="show-price">
+                <i class="fas fa-hamburger"></i>
+                <%= @tour.meals? ? "Meals" : "No meals available" %>
+            </div>
+            
+            <div class="show-price">
+                <i class="fas fa-ticket-alt"></i>
+                <%= @tour.entry_tickets? ? "Tickets" : "No Tickets"  %>
+            </div>
+           
+            <div class="show-accommodation">
+                <i class="fas fa-home"></i><%= @tour.accommodation? ? "Accommodation" : "No accommodation " %>
+            </div>
+    
+            <div class="show-pickup">
+                <i class="fas fa-truck-pickup"></i>
+                <%= @tour.pick_up? ? "Pickup" : "No pickup available"%>
+            </div>
+    
+            <div class="show-transport">
+                <i class="fas fa-bus"></i> <%= @tour.transport? ? "Transport" : "No transport " %> 
+            </div>
+            
+    
+        </div> -->
+    
+    </div>
+    
+    
+    <!-- <div class="tour-gallery-wrapper">
+    
+        <% if @tour.images.attached? %>
+            <%  @tour.images.each do |image| %>
+        
+                <div class="tour-show-gallery">
+                    <%= image_tag image %>
+                </div>
+        
+            <% end %>   
+        <% end %>
+    
+    </div> -->
+    
+    
+    
+    
+    
 
-</div> -->
-
-
-
-
+</div>
 
 
 
