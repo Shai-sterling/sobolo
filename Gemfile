@@ -30,6 +30,8 @@ gem 'carrierwave', '~> 2.0'
 gem 'mini_magick', '~> 4.11'
 
 
+gem 'geocoder', '~> 1.7', '>= 1.7.2'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
