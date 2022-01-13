@@ -6,4 +6,6 @@ Rails.application.routes.draw do
     resources :tours
     root "tours#new"
 
+    get "/discover", to: "discover#ghana"
+
 end

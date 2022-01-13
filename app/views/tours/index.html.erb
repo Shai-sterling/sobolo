@@ -3,30 +3,22 @@
 <div class="hero-container">
     <div class="hero-background"></div>
     <div class="hero-text">
-        <h1 class="discover-text">Discover Ghana with the locals</h1>
-      
+        <h1 class="discover-text">Discover Ghana with the locals</h1> 
         <button class="hero-text-btn" >view tours</button>
     </div> 
 </div>
 
-
-
 <section style="width: 100%; background: white">
-
     <div id="find-tours" class="find-tour">
         <%= image_tag "colors.png", alt: "colors" %>
         <p class="adventure">Find your next adventure </p>
         <p class="adventure-text">Our tours are designed for small groups of 4-5 people, so that we can keep them flexible and tailor them for you along the way. </p>
         <p class="adventure-text"> From the pick-up at your accomodation we will take care of every aspect of the tour, so you don’t need to carry a cent with you.</p>
     </div> 
-
 </section>
 
-
-
-
-
 <div class="tour-container">
+
     <% @tours.each do |tour| %>
 
         <div class="tour-card" >
@@ -42,34 +34,9 @@
             <p class="tour-sites">Tafi monkey sanctury - Shai hills -  Wli water falls - Afajato </p>
 
             <div class="tour-card-details">
-
-                <!-- <div class="tour-card-item">
-                    <p><%= tour.accommodation? ? "Accommodation" : "No acccommodation" %></p>
-                </div>
-                
-                <div class="tour-card-item">
-                    <p><%= tour.transport? ? "Transport" : "No transport" %></p>   
-                </div>
-                
-                <div class="tour-card-item">
-                    <p> <%= tour.entry_tickets %> <%= tour.entry_tickets? ? "Fees" : "No fees" %></p>
-                </div>
-                
-                <div class="tour-card-item">
-                    <p> <%= tour.duration > 1 ? "#{tour.duration}  Days trip" : "Day trip" %> </p>
-                </div>
-                
-                <div class="tour-card-item">
-                    <p><%= tour.meals? ? "Meals" : "No meals" %></p>
-                </div>
-                
-                <div class="tour-card-item">
-                    <p><%= tour.pick_up? ? "Pickup" : "No pickup" %></p>
-                </div> -->
                 <div class="tour-card-item" >
                     <p><%= tour.description.truncate(80) %></p>
                 </div> 
-
             </div>  
             
             <div id="read-more">
@@ -79,49 +46,50 @@
             <div class="tour-card-item", id="tour-price">
                 <p><%= number_to_currency(tour.price, unit: "€" ) %></p>    
             </div> 
-        
         </div>
-        
+
     <% end %>
-        
+
 </div>
 
-
-
 <section style="width: 100%; background: white">
-
     <div id="find-team" class="find-team">
         <%= image_tag "colors.png", alt: "colors" %>
         <p class="adventure">Meet our team </p>
         <p class="adventure-text">Our tours are designed for small groups of 4-5 people, so that we can keep them flexible and tailor them for you along the way. </p>
         <p class="adventure-text">From the pick-up at your accomodation we will take care of every aspect of the tour, so you don’t need to carry a cent with you.</p>
     </div> 
-
 </section>
 
 <section class="team-back">
-
     <div class="team-wrapper">
         <div class="team">
             <%= image_tag"janet.jpeg" %>
-            <h4>Janet</h4>
-            <p>Our tours are designed for small groups of 4-5 people, so that we can keep them flexible and tailor them for you along the way.</p>
-            <p>From the pick-up at your accomodation we will take care of every aspect of the tour, so you don’t need to carry a cent with you.</p>
+            <p class="team-name">Janet</p>
+            <div class="team-info">
+                <p>Our tours are designed for small groups of 4-5 people, so that we can keep them flexible and tailor them for you along the way.</p>
+                <p>From the pick-up at your accomodation we will take care of every aspect of the tour, so you don’t need to carry a cent with you.</p>
+            </div>
         </div>
 
         <div class="team">
             <%= image_tag"edem.jpeg" %>
-            <h4>Edem</h4>
-            <p>Our tours are designed for small groups of 4-5 people, so that we can keep them flexible and tailor them for you along the way.</p>
-            <p>From the pick-up at your accomodation we will take care of every aspect of the tour, so you don’t need to carry a cent with you.</p>
+            <p class="team-name">Edem</p>
+            <div class="team-info">
+                <p>Our tours are designed for small groups of 4-5 people, so that we can keep them flexible and tailor them for you along the way.</p>
+                <p>From the pick-up at your accomodation we will take care of every aspect of the tour, so you don’t need to carry a cent with you.</p>
+            </div>
         </div>
         
-
         <div class="team">
             <%= image_tag"amount.jpeg" %>
-            <h4>Amount</h4>
-            <p>Our tours are designed for small groups of 4-5 people, so that we can keep them flexible and tailor them for you along the way.</p>
-            <p>From the pick-up at your accomodation we will take care of every aspect of the tour, so you don’t need to carry a cent with you.</p>
+
+            <p class="team-name">Amount<p>
+
+            <div class="team-info">
+                <p>Our tours are designed for small groups of 4-5 people, so that we can keep them flexible and tailor them for you along the way.</p>
+                <p>From the pick-up at your accomodation we will take care of every aspect of the tour, so you don’t need to carry a cent with you.</p>
+            </div>
         </div>
     </div>
 

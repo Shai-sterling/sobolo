@@ -1,7 +1,7 @@
 
 
 
-<%= form_with model: @tour do  |form| %>
+<%= form_with model: @tour, local: true, data: { controller: "places", action: "google-maps-callback@windows->places.initializeMap"} do |form| %>
     <div class="tour"> 
         <div class="tour-name">
 
@@ -11,7 +11,6 @@
                         <%= message %>
                     </p>      
                 <% end %>
-
             <% end %>
 
             <p><%= form.label :name %></p>
@@ -21,73 +20,69 @@
         <div class="tour-price"> 
 
             <% if @tour.errors.any? %>
-
                 <% @tour.errors.full_messages_for(:price).each do |message| %>
                     <p class="tour-forrm-err">
                         <%= message %>
                     </p>               
                 <% end %>
-
             <% end %>
 
-            <h4><%= form.label :price %></h4>
+            <p><%= form.label :price %></p>
             <%= form.text_field :price, placeholder: "Cost of your Tour" %>
         </div>
 
         <div class="tour-duration">
-            <h4><%= form.label :duration %></h4>
+            <p><%= form.label :duration %></p>
             <%= form.select :duration, [1, 2, 3, 4], class: "duration" %>
         </div>
 
         <div class="tour-accommodation">
-           <h4> <%= form.label :accommodation %></h4>
+           <p> <%= form.label :accommodation %></p>
             <%= form.radio_button :accommodation, true  %>
         </div>
 
         <div class="tour-meals">
-            <h4><%= form.label :meals %></h4>
+            <p><%= form.label :meals %></p>
             <%= form.radio_button :meals, true %>
         </div>
 
         <div class="tour-entry">
-            <h4><%= form.label :entry_tickets %></h4>
+            <p><%= form.label :entry_tickets %></p>
             <%= form.radio_button :entry_tickets, true  %>
         </div>
 
         <div class="tour-pickup">
-            <h4><%= form.label :pickup %></h4>
+            <p><%= form.label :pickup %></p>
             <%= form.radio_button :pick_up, true %>
         </div>
 
         <div class="tour-transport">
-            <h4><%= form.label :transport %></h4>
+            <p><%= form.label :transport %></p>
             <%= form.radio_button :transport, true %>
         </div>
 
         <div class="tour-description">
 
             <% if @tour.errors.any? %>
-
-            <% @tour.errors.full_messages_for(:description).each do |message| %>
-                <p class="tour-forrm-err">
-                    <%= message %>
-                </p>               
+                <% @tour.errors.full_messages_for(:description).each do |message| %>
+                    <p class="tour-forrm-err">
+                        <%= message %>
+                    </p>               
+                <% end %>
             <% end %>
 
-        <% end %>
-
-            <h4><%= form.label :description %></h4>
-            <%= form.text_field :description %>
+            <p><%= form.label :description %></p>
+            <%= form.text_area :description %>
         </div>
 
-        <div class="tour-description">
-            <h4><%= form.label :images %></h4>
+        <div class="tour-">
+            <p><%= form.label :images %></p>
             <%= form.file_field :images, multiple: true %>
         </div>
 
         <div class="tour-submit">
             <%= form.submit "Post Tour", class: "tour-btn" %>
         </div>
-
     </div>
+
 <% end %>
