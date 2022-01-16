@@ -13,7 +13,9 @@
  *= require_tree .
  *= require_self
  */
-
+ html {
+    scroll-behavior: smooth;
+  }
 
 
  .map {
@@ -200,6 +202,7 @@ body {
         width: 100%;
         height: 70vh;
         opacity: none;
+        
      
     }
 
@@ -219,9 +222,19 @@ body {
         font-family: 'Montserrat', sans-serif;
         font-size: 4em;
         font-weight: 500;
+        margin-top: 20px;
 
     }
-       
+       #discover-ghana-btn {
+           background: none;
+           border: 1px solid white;
+           margin-left: 30px;
+
+           a {
+               color: white;
+               text-decoration: none;
+           }
+       }
   
 
     .hero-text-btn {
@@ -235,6 +248,11 @@ body {
         font-size: 1em;
         background: #ED6749;
         letter-spacing: 2px;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
     }    
     
 }
@@ -281,23 +299,25 @@ body {
 
 .tour-container {
     width: 80%;
-   // background: #e95d5d;
+    //background: #e95d5d;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
      margin: auto;
-     padding: 80px 0px;
-   
+    align-content: space-between;   
+    padding: 50px 0px;
 }
 
 .tour-card {
-    background: rgb(255, 255, 255);
+    //background: rgb(133, 45, 45);
     width: 30%;
     min-width: 350px;
     padding-bottom: 10px;
+    margin: 34px 0px;
+
+
     //overflow: hidden;
     border-radius: 5px;
-
     box-shadow: 1px 2px 13px 2px rgba(0, 0, 0, 0.15);
     img {
 
@@ -356,7 +376,7 @@ body {
 
     #read-more {
        // background: hotpink;
-        padding: 0px 20px 5px 20px;
+        padding: 10px 20px 5px 20px;
     }
 
     
@@ -366,7 +386,7 @@ body {
 
 .team-back {
 
-    background: url("voltalake.jpeg");
+    background: url("coconuts.png");
     background-position: center;
     background-repeat: no-repeat ;
     background-size: cover;
@@ -395,12 +415,11 @@ body {
     width: 28%;
     min-width: 350px;
     box-shadow: 1px 2px 13px 2px rgba(0, 0, 0, 0.15);
+    
 
     img {
         margin-bottom: 5px;
         width: 70%;
-        background: red;
-        border-radius: 100%;
     }
 
     .team-name {
@@ -439,13 +458,14 @@ body {
  img {
     width: 50%;
     min-width: 500px;
+    //height: 450px;
     border-radius: 5px;
     image-rendering: auto;
     image-rendering: crisp-edges;
     image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
 
     /* Safari seems to support, but seems deprecated and does the same thing as the others. */
-    image-rendering: -webkit-optimize-contrast;
  }
 
 
@@ -553,6 +573,7 @@ footer {
     color: white;
     padding-top: 150px;
     padding-bottom: 50PX;
+    margin-top: 140px;
 
     img {
         width: 200px;
@@ -567,7 +588,7 @@ footer {
             //font-size: 1.7em;
             line-height: 26px;
             font-size: 24px;
-            margin-bottom: 30px;
+            margin-bottom: 50px;
         }
 
         .footer-icons {
@@ -598,3 +619,36 @@ footer {
 
     }
 }
+
+
+
+
+
+
+/////discover///@
+
+
+
+
+
+.todo-image {
+    width: 50%;
+    //background: saddlebrown;
+    height: 400px;
+}
+
+
+.todo-text {
+    width: 50%;
+    //background-color: rgb(22, 150, 255);
+    overflow-y: scroll;
+    line-height: 24px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0px 50px;
+    max-height: 300px;
+    overflow: scroll;
+    
+}
+
+

@@ -4,7 +4,8 @@
     <div class="hero-background"></div>
     <div class="hero-text">
         <h1 class="discover-text">Discover Ghana with the locals</h1> 
-        <button class="hero-text-btn" >view tours</button>
+        <button class="hero-text-btn" ><a href="#find-tours">view tours</a></button>
+        <button id="discover-ghana-btn" class="hero-text-btn"><%= link_to "discover Ghana", discover_path %></button>
     </div> 
 </div>
 
@@ -33,14 +34,14 @@
 
             <p class="tour-sites">Tafi monkey sanctury - Shai hills -  Wli water falls - Afajato </p>
 
-            <div class="tour-card-details">
+            <!-- <div class="tour-card-details">
                 <div class="tour-card-item" >
                     <p><%= tour.description.truncate(80) %></p>
                 </div> 
             </div>  
-            
+             -->
             <div id="read-more">
-                <%= link_to "Learn more ", tour_path(tour), class: "read-more" %>
+                <%= link_to "read more ", tour_path(tour), class: "read-more" %>
             </div>
                             
             <div class="tour-card-item", id="tour-price">
@@ -51,6 +52,7 @@
     <% end %>
 
 </div>
+
 
 <section style="width: 100%; background: white">
     <div id="find-team" class="find-team">
