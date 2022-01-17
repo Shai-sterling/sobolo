@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
 
     resources :tours
-    root "tours#new"
+    root "tours#index"
 
     get "/discover", to: "discover#ghana"
 

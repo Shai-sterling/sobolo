@@ -13,24 +13,18 @@
  *= require_tree .
  *= require_self
  */
- html {
-    scroll-behavior: smooth;
-  }
-
-
- .map {
-     width: 100%;
-     height: 200px;
-     margin-top: 20px;
- }
-
-* {
-
+ 
+ * { 
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    
-}
+     
+    }
+
+
+html {
+       scroll-behavior: smooth;
+    }
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -59,13 +53,9 @@ body {
    
         img {
             max-height: 50px;
-            max-width: 40%; 
            // background-color: cornflowerblue;
-           color: white;
         }
             
-
-
         .nav-list {
 
          //   background-color: darkorange;
@@ -201,9 +191,7 @@ body {
         top: 0;
         width: 100%;
         height: 70vh;
-        opacity: none;
-        
-     
+        opacity: none; 
     }
 
 
@@ -212,9 +200,7 @@ body {
         position: absolute;
         top: 110px ;
        //background-color: #ED6749;
-        width: 80%;
-        
-      
+        width: 80%;   
     }
     
     
@@ -256,14 +242,6 @@ body {
     }    
     
 }
-
-
-
-
-
-
-
-
 
 //  Find tours on Index //
 
@@ -314,13 +292,11 @@ body {
     min-width: 350px;
     padding-bottom: 10px;
     margin: 34px 0px;
-
-
     //overflow: hidden;
     border-radius: 5px;
     box-shadow: 1px 2px 13px 2px rgba(0, 0, 0, 0.15);
-    img {
 
+    img {
         width: 100%;
         height: 300px;   
         image-rendering: auto;
@@ -330,7 +306,6 @@ body {
         image-rendering: -webkit-optimize-contrast;
     }
 
-    
     #tour-name {  
         color: #000;
         padding: 5px 20px;
@@ -351,7 +326,6 @@ body {
         padding: 30px 20px 0px 20px ;
         //padding: 10px;
         line-height: 28px;
-
         
     }
 
@@ -360,7 +334,6 @@ body {
         color: rgb(36, 36, 36);
         width: 100%;
     }
-
 
     #tour-price {
       // background: #ED6749;
@@ -371,8 +344,7 @@ body {
         font-weight: 500;
         letter-spacing: 1px;
       
-    }
-       
+    }   
 
     #read-more {
        // background: hotpink;
@@ -381,8 +353,6 @@ body {
 
     
 }
-
-
 
 .team-back {
 
@@ -403,19 +373,17 @@ body {
   //  background-color: #bebcbc;
     padding: 80px 0px;
     //border: 1px solid red;
-    
 
 }
 
 .team {
-
-    
     background: white;
     text-align: center;
     width: 28%;
     min-width: 350px;
     box-shadow: 1px 2px 13px 2px rgba(0, 0, 0, 0.15);
     
+    margin: 34px 0px;
 
     img {
         margin-bottom: 5px;
@@ -436,9 +404,6 @@ body {
 
 
 // tour show //
-
-
-
 
 .tour-show-wrapper {
     background-color: rgb(255, 255, 255);
@@ -477,12 +442,6 @@ body {
     line-height: 24px;
     width: 45%;
     
-
-
-
-
-
-
     .description-text {
 
     height: 80%;
@@ -496,19 +455,14 @@ body {
     }
 }
 
-        
-        
-
-    .tour-region {
-        font-size: 2em;
-        color: #ED6749;
-        margin-bottom: 10px;
-    }
-
+.tour-region {
+    font-size: 2em;
+    color: #ED6749;
+    margin-bottom: 10px;
+}
 
 
     .show-tour-details {
-
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -520,12 +474,10 @@ body {
     }
 
 
-
     .tour-show-gallery {
         border: 1px solid red;
        
     }
-
 
 
     .edit-btn {
@@ -625,30 +577,71 @@ footer {
 
 
 
-/////discover///@
-
+/////discover///
+.things-todo-wrapper {
+    background: rgb(9, 212, 248);
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
 
 
 
 
 .todo-image {
     width: 50%;
-    //background: saddlebrown;
-    height: 400px;
+    background: saddlebrown;
+    min-width: 400px;
 }
 
 
-.todo-text {
+
+
+
+.todo-text1 {
+    background: rgb(255, 255, 255);
     width: 50%;
-    //background-color: rgb(22, 150, 255);
-    overflow-y: scroll;
-    line-height: 24px;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    padding: 0px 50px;
-    max-height: 300px;
-    overflow: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-width: 400px;
+    padding-left: 40px ;
+    padding-top: 40px;
+
+}
+
+
+.number {
+    font-size: 4rem;
+    color: #F47559;
+    font-weight: 900;
+  // background-color: red;
+}
+
+#yellow-number {
+    color: #F2C854;
     
 }
 
+#green-number {
+    color: #75C093;
 
+}
+
+
+.todo-info {
+    //background: palegreen;
+    padding-top: 8px;
+    width: 60%;
+
+    .todo-heading {
+        font-weight: 400;
+        margin-bottom: 20px
+    }
+
+}
+
+.todo-triangle {
+    width: 20%;
+}
