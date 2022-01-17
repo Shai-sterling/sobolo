@@ -19,10 +19,8 @@
 </section>
 
 <div class="tour-container">
-
     <% @tours.each do |tour| %>
-
-        <div class="tour-card" >
+        <div class="tour-card">
 
             <% if tour.images.attached? %>
                 <%= image_tag tour.images.first %>
@@ -34,12 +32,6 @@
 
             <p class="tour-sites">Tafi monkey sanctury - Shai hills -  Wli water falls - Afajato </p>
 
-            <!-- <div class="tour-card-details">
-                <div class="tour-card-item" >
-                    <p><%= tour.description.truncate(80) %></p>
-                </div> 
-            </div>  
-             -->
             <div id="read-more">
                 <%= link_to "read more ", tour_path(tour), class: "read-more" %>
             </div>
@@ -48,9 +40,7 @@
                 <p><%= number_to_currency(tour.price, unit: "€" ) %></p>    
             </div> 
         </div>
-
     <% end %>
-
 </div>
 
 
@@ -63,7 +53,7 @@
     </div> 
 </section>
 
-<section class="team-back">
+<section class="team-back" >
     <div class="team-wrapper">
         <div class="team">
             <%= image_tag"janet.jpeg" %>
