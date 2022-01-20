@@ -1,7 +1,7 @@
 class ToursController < ApplicationController
 
     before_action :authenticate_user!, except: [:index, :show]
-    before_action :set_tour, only: %i[show edit destroy]  
+    before_action :set_tour, only: %i[show edit destroy update]  
 
     def index
         @tours = Tour.all
