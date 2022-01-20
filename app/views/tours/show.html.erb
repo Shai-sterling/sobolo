@@ -1,12 +1,13 @@
 <div class="tour-show-wrapper">
     <div class="tour-show-photo">
 
-        <% if @tour.images.attached? %>
-            <%= image_tag @tour.images.first %>
+        <% if @tour.image.persisted? %>
+            <%= image_tag(@tour.image) %>
         <% end %>
         
         <div id="show-tour-description" class="show-tour-description">
-            <p class="tour-region"> <%= @tour.name.capitalize %> Region</p>
+
+            <p class="tour-region"><%= @tour.name.capitalize %> Region</p>
 
             <div class="description-text">
                 <%= @tour.description %>
@@ -20,6 +21,7 @@
         </div>
     
         <div class="show-tour-details">
+
             <div class="show-price">
                 <%= number_to_currency( @tour.price, unit: "€" )  %>
             </div>
@@ -51,23 +53,9 @@
             <div class="show-transport">
                 <i class="fas fa-bus"></i> <%= @tour.transport? ? "Transport" : "No transport " %> 
             </div>
+
         </div> 
-    
     </div>
-    
-    <!-- <div class="tour-gallery-wrapper">
-    
-        <% if @tour.images.attached? %>
-            <%  @tour.images.each do |image| %>
-        
-                <div class="tour-show-gallery">
-                    <%= image_tag image %>
-                </div>
-        
-            <% end %>   
-        <% end %>
-    
-    </div> -->
 </div>
 
 

@@ -23,18 +23,12 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
-
-
 # Use for user authentication
-
 gem 'devise', '~> 4.8', '>= 4.8.1'
-
-#gem 'carrierwave', '~> 2.0'
-
+# Use for devise form syling
+# gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+# Support for uploading images with active storage
 gem 'mini_magick', '~> 4.11'
-
-
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 

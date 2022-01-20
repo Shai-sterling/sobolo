@@ -4,7 +4,6 @@
 <%= form_with model: @tour, local: true, data: { controller: "places", action: "google-maps-callback@windows->places.initializeMap"} do |form| %>
     <div class="tour"> 
         <div class="tour-name">
-
             <% if @tour.errors.any? %>
                 <% @tour.errors.full_messages_for(:name).each do |message| %>
                     <p class="tour-forrm-err">
@@ -18,7 +17,6 @@
         </div>
 
         <div class="tour-price"> 
-
             <% if @tour.errors.any? %>
                 <% @tour.errors.full_messages_for(:price).each do |message| %>
                     <p class="tour-forrm-err">
@@ -62,7 +60,6 @@
         </div>
 
         <div class="tour-description">
-
             <% if @tour.errors.any? %>
                 <% @tour.errors.full_messages_for(:description).each do |message| %>
                     <p class="tour-forrm-err">
@@ -76,13 +73,13 @@
         </div>
 
         <div class="tour-">
-            <p><%= form.label :images %></p>
-            <%= form.file_field :images, multiple: true %>
+            <p><%= form.label :image %></p>
+            <%= form.file_field :image %>
         </div>
 
         <div class="tour-submit">
             <%= form.submit "Post Tour", class: "tour-btn" %>
         </div>
-    </div>
 
+    </div>
 <% end %>

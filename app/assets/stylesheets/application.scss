@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+
+
  
  * { 
     margin:0;
@@ -21,10 +24,9 @@
      
     }
 
-
 html {
-       scroll-behavior: smooth;
-    }
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -32,65 +34,73 @@ body {
    
 }
 
-//----------nav---------//
 
-.wrap {
-    width: 100%;
-    //position: fixed;
-    //top: 0;
-    border-bottom: 2px solid  #fafafa;
-    background: rgb(255, 255, 255);
-    z-index: 10;
+//Navigation//
 
-    .nav-links {
-        width: 80%;
-       // background-color: darkgreen;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: auto;
-        padding: 20px 0px ;
-   
-        img {
-            max-height: 50px;
-           // background-color: cornflowerblue;
-        }
-            
-        .nav-list {
 
-         //   background-color: darkorange;
+.nav-wrapper {
+    background: #ffffff;
+    position: relative;
+}
 
-         a {
-             color: rgb(0, 0, 0);
-             text-decoration: none;
 
-            }
-            
-            a:hover {
-                border-bottom: 4px #ED6749 solid;
-            }
+.nav-items {
+    width: 80%;
+    margin: auto;
+    //background-color: rgb(173, 18, 18);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+}
 
-            li  {
-                list-style: none;
-                color: rgb(0, 0, 0);
-                display: inline;
-                cursor: pointer;
-                font-size: 1.2em;
-                font-weight: 500; 
-                margin-left: 15px;
-                // background: yellowgreen;
-                text-decoration: none;
+.nav-links {
 
-            }
-            
-        }
+    //background: yellow;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+
+    a {
+        
+        text-decoration: none;
+        font-size: 19px;
+        font-weight: 500;
+        background-color: white;
+        margin-left: 10px;
+        padding: 10px;
+        color: black;
+
+    }
+  
+
+
+    .login {
+        border-radius: 5px;
+        border-radius: 5px;
+        border: 2px solid #75C093;
+        color: #75C093;
+        width: 100px;
+        text-align: center;
        
-    } 
+    }
 
+
+    .sign-up {
+        border-radius: 5px;
+        border: 2px solid #ED6749;
+        color: #ED6749;
+        width: 100px;
+        text-align: center;
+
+    } 
 }
 
 
  //-----------Tour  new form ----------//
+
+
 .tour {
     width: 80%;
     background: rgb(236, 236, 236);
@@ -178,7 +188,6 @@ body {
 .hero-container {
     background: url("rock.jpeg");
     background-position: center;
-    position: relative;
     background-repeat: no-repeat;
     background-size:cover ;
     height: 70vh;
@@ -198,9 +207,11 @@ body {
     .hero-text {
         color: white;
         position: absolute;
-        top: 110px ;
+        top: 200px ;
        //background-color: #ED6749;
-        width: 80%;   
+        width: 80%; 
+        padding: 20px 0px; 
+       
     }
     
     
@@ -231,7 +242,7 @@ body {
         margin-left: 10px;
         border-radius: 5px;
         width: 200px;
-        font-size: 1em;
+        font-size: 1.2em;
         background: #ED6749;
         letter-spacing: 2px;
 
@@ -421,14 +432,15 @@ body {
 
  
  img {
-    width: 50%;
     min-width: 500px;
+    max-height: 700px;
     //height: 450px;
     border-radius: 5px;
     image-rendering: auto;
     image-rendering: crisp-edges;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
+    border: none;
 
     /* Safari seems to support, but seems deprecated and does the same thing as the others. */
  }
