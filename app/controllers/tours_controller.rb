@@ -1,15 +1,18 @@
 class ToursController < ApplicationController
 
+    before_action :authenticate_user!, except: [:index, :show]
+    before_action :set_tour, only: %i[show edit destroy]  
+
     def index
         @tours = Tour.all
     end
 
     def new
-        @tour = Tour.new
+        @tour = current_user.tours.build
     end
 
     def create
-        @tour = Tour.new(tour_params)
+        @tour = current_user.tours.build(tour_params)
         if @tour.save
             redirect_to tours_path, notice: "Tour saved successufully" 
         else
@@ -18,26 +21,32 @@ class ToursController < ApplicationController
     end
 
     def show 
-       @tour = Tour.find(params[:id])
     end
 
     def edit 
-        @tour = Tour.find(params[:id])
     end 
 
     def update
-        @tour = Tour.find(params[:id])
         @tour.update(tour_params)
         redirect_to @tour, notice: "Tour updated sucessfully"
     end
 
     def destroy
-        @tour = Tour.find(params[:id])
         @tour.destroy
         redirect_to root_path, notice: "Tour deleted successfully"
     end
 
+
+
+
     private
+
+    def set_tour 
+
+        @tour = Tour.find(params[:id])
+
+
+    end
   
     def tour_params
         params.require(:tour).permit(:name, :price, :duration, :accommodation, :meals, :entry_tickets, :pick_up, :transport, :description, :image)

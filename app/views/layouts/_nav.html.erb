@@ -6,10 +6,11 @@
     <div class="nav-links">
 
         <%= link_to "Home", root_path %>
+        <%= link_to "All Tours", tours_path %>
+        <%= link_to "Discover Ghana", discover_path %>
+        
+        <% if user_signed_in? %>
         <%= link_to "New tour", new_tour_path %>
-        <%= link_to "Tours", tours_path %>
-
-      <% if user_signed_in? %>
           <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"sign-out" %>
       <% else %>
           <%= link_to "sign up", new_user_registration_path, class: "sign-up" %>

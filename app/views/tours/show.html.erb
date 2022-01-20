@@ -13,24 +13,30 @@
                 <%= @tour.description %>
             </div>
     
+
+
+            <% if user_signed_in? && @tour.user_id == current_user.id %> 
+
             <div class="tour-show-btn-wrapper">
                 <%= link_to "edit", edit_tour_path(@tour), class: "edit-btn" %>
                 <%= link_to "delete", tour_path(@tour), method: :delete, data: { confirm: "are you sure?"}, class:"delete-btn" %>
-                <%= link_to "back", tours_path %>
             </div>  
+            
+            <% end%>
+
         </div>
     
         <div class="show-tour-details">
-
+            
             <div class="show-price">
                 <%= number_to_currency( @tour.price, unit: "€" )  %>
             </div>
-    
+            
             <div class="show-price">
                 <i class="fas fa-cloud-sun" ></i>
-                 <%= @tour.duration > 1 ? "#{@tour.duration}  days trip" : " 1 day trip" %>
+                <%= @tour.duration > 1 ? "#{@tour.duration}  days trip" : " 1 day trip" %>
             </div>
-    
+            
             <div class="show-price">
                 <i class="fas fa-hamburger"></i>
                 <%= @tour.meals? ? "Meals" : "No meals available" %>
@@ -40,22 +46,24 @@
                 <i class="fas fa-ticket-alt"></i>
                 <%= @tour.entry_tickets? ? "Tickets" : "No Tickets"  %>
             </div>
-           
+            
             <div class="show-accommodation">
                 <i class="fas fa-home"></i><%= @tour.accommodation? ? "Accommodation" : "No accommodation " %>
             </div>
-    
+            
             <div class="show-pickup">
                 <i class="fas fa-truck-pickup"></i>
                 <%= @tour.pick_up? ? "Pickup" : "No pickup available"%>
             </div>
-    
+            
             <div class="show-transport">
                 <i class="fas fa-bus"></i> <%= @tour.transport? ? "Transport" : "No transport " %> 
             </div>
-
+            
         </div> 
     </div>
 </div>
 
 
+
+<%= link_to "back", tours_path %>

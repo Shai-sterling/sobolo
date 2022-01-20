@@ -432,7 +432,7 @@ body {
 
  
  img {
-    min-width: 500px;
+    max-width: 600px;
     max-height: 700px;
     //height: 450px;
     border-radius: 5px;
@@ -440,7 +440,6 @@ body {
     image-rendering: crisp-edges;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
-    border: none;
 
     /* Safari seems to support, but seems deprecated and does the same thing as the others. */
  }
