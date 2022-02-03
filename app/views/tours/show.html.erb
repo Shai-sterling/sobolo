@@ -6,63 +6,78 @@
         <% end %>
         
         <div id="show-tour-description" class="show-tour-description">
-
+            
             <p class="tour-region"><%= @tour.name.capitalize %> Region</p>
 
             <div class="description-text">
                 <%= @tour.description %>
             </div>
     
-
-
             <% if user_signed_in? && @tour.user_id == current_user.id %> 
-
-            <div class="tour-show-btn-wrapper">
-                <%= link_to "edit", edit_tour_path(@tour), class: "edit-btn" %>
-                <%= link_to "delete", tour_path(@tour), method: :delete, data: { confirm: "are you sure?"}, class:"delete-btn" %>
-            </div>  
-            
+                <div class="tour-show-btn-wrapper">
+                    <%= link_to "edit", edit_tour_path(@tour), class: "edit-btn" %>
+                    <%= link_to "delete", tour_path(@tour), method: :delete, data: { confirm: "are you sure?"}, class:"delete-btn" %>
+                </div>  
             <% end%>
 
         </div>
     
         <div class="show-tour-details">
-            
-            <div class="show-price">
+        
+            <div class="show-tour-detail">
                 <%= number_to_currency( @tour.price, unit: "€" )  %>
             </div>
-            
-            <div class="show-price">
-                <i class="fas fa-cloud-sun" ></i>
+
+            <div class="show-tour-detail">
                 <%= @tour.duration > 1 ? "#{@tour.duration}  days trip" : " 1 day trip" %>
             </div>
             
-            <div class="show-price">
-                <i class="fas fa-hamburger"></i>
+            <div class="show-tour-detail">
+                <%= image_tag("soup") %>
                 <%= @tour.meals? ? "Meals" : "No meals available" %>
             </div>
             
-            <div class="show-price">
-                <i class="fas fa-ticket-alt"></i>
+            <div class="show-tour-detail">
+                <%= image_tag("ticket") %>
                 <%= @tour.entry_tickets? ? "Tickets" : "No Tickets"  %>
             </div>
             
-            <div class="show-accommodation">
-                <i class="fas fa-home"></i><%= @tour.accommodation? ? "Accommodation" : "No accommodation " %>
+            <div class="show-tour-detail">
+                <%= image_tag("bed") %>
+                <%= @tour.accommodation? ? "Accommodation" : "No accommodation " %>      
             </div>
             
-            <div class="show-pickup">
-                <i class="fas fa-truck-pickup"></i>
+            <div class="show-tour-detail">
+                <%= image_tag("pickup") %>
                 <%= @tour.pick_up? ? "Pickup" : "No pickup available"%>
             </div>
             
-            <div class="show-transport">
-                <i class="fas fa-bus"></i> <%= @tour.transport? ? "Transport" : "No transport " %> 
+            <div class="show-tour-detail">
+                <%= image_tag("bus") %>
+                <%= @tour.transport? ? "Transport" : "No transport " %> 
             </div>
             
         </div> 
     </div>
 </div>
+
+
+<section style="width: 100%; background: white">
+    <div id="find-tours" class="find-tour">
+        <%= image_tag "colors.png", alt: "colors" %>
+        <p class="adventure"> The <%= @tour.name %> itinerary </p> 
+    </div> 
+</section>
+
+
+<% if @tour.name == "volta" %>
+    <div class="itinerary-wrapper">
+        <div class="itineray-map">
+            <%= image_tag("voltamap") %>
+        </div>
+    </div>
+<% end %>
+
 
 
 

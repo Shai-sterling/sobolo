@@ -1,12 +1,32 @@
-   
-      
 <div class="hero-container">
     <div class="hero-background"></div>
     <div class="hero-text">
         <h1 class="discover-text">Discover Ghana with the locals</h1> 
-        <button class="hero-text-btn" ><a href="#find-tours">view tours</a></button>
+        <button class="hero-text-btn"><a href="#find-tours">view tours</a></button>
         <button id="discover-ghana-btn" class="hero-text-btn"><%= link_to "discover Ghana", discover_path %></button>
     </div> 
+</div>
+
+<div class="tour-offer">
+    <div class="sustainable-icons">
+        <%= image_tag("loco2.png") %>
+        <h5>Made by locals</h5>
+    </div>
+
+    <div class="sustainable-icons">
+        <%= image_tag("leaf.png") %>
+        <h5>Eco friendly</h5>
+    </div>
+
+    <div class="sustainable-icons">
+        <%= image_tag("fares.png") %>
+        <h5>Transparent fares</h5>
+    </div>
+
+    <div class="sustainable-icons">
+        <%= image_tag("loco.png") %>
+        <h5>Tailored itineraries</h5>
+    </div>
 </div>
 
 <section style="width: 100%; background: white">
@@ -20,7 +40,6 @@
 
 <div class="tour-container">
     <% @tours.each do |tour| %>
-
         <div class="tour-card">
             
             <%= image_tag(tour.image) %>
@@ -40,10 +59,8 @@
             </div> 
 
         </div>
-
     <% end %>
 </div>
-
 
 <section style="width: 100%; background: white">
 
@@ -89,8 +106,29 @@
     </div>
 </section>
 
+<section style="width: 100%; background: white">
+    <div id="find-tours" class="find-tour">
+        <%= image_tag "colors.png", alt: "colors" %>
+        <p class="adventure">Discover Ghana</p>
+      </div> 
+</section>
 
+<div class="tour-discover-wrapper">
 
-
-
+    <div class="tour-discover">
     
+        <div class="discover-image">
+            <%= image_tag "rock" %>
+            <%= image_tag "robilake" %>
+            <%= image_tag "labadi" %>
+            <%= image_tag "chilling" %>
+        </div>
+        
+        <div class="discover-info">
+            <h1 class="todo-heading">Our favourite things to do in Ghana</h1> 
+            <%= image_tag "green_triangle", class: "todo-triangle" %>
+        </div>
+    
+    </div>
+
+</div>
