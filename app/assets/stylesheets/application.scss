@@ -47,30 +47,29 @@ body {
 .nav-items {
     width: 80%;
     margin: auto;
-    //background-color: rgb(173, 18, 18);
+    background-color: rgb(173, 18, 18);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0px;
+    
 }
 
 .nav-links {
 
-    //background: yellow;
-    display: flex;
-    justify-content: space-between;
+    background: yellow;
+    align-items: center;
     padding: 10px;
-
 
     a {
         
         text-decoration: none;
-        font-size: 19px;
+        font-size: 20px;
         font-weight: 500;
         background-color: white;
-        margin-left: 10px;
-        padding: 10px;
         color: black;
+        text-align: center;
+        margin: 10px;
 
     }
   
@@ -78,11 +77,10 @@ body {
 
     .login {
         border-radius: 5px;
-        border-radius: 5px;
         border: 2px solid #75C093;
         color: #75C093;
-        width: 100px;
         text-align: center;
+        padding: 5px;
        
     }
 
@@ -91,13 +89,18 @@ body {
         border-radius: 5px;
         border: 2px solid #ED6749;
         color: #ED6749;
-        width: 100px;
         text-align: center;
+        padding: 5px;
 
     } 
 }
 
 
+
+
+
+
+  
  //-----------Tour  new form ----------//
 
 
@@ -219,7 +222,6 @@ body {
         font-family: 'Montserrat', sans-serif;
         font-size: 4em;
         font-weight: 500;
-        margin-top: 20px;
 
     }
        #discover-ghana-btn {
@@ -254,6 +256,38 @@ body {
     
 }
 
+@media(max-width: 1100px) {
+    
+    .discover-text {
+        font-size: 3em !important;
+        background-color: burlywood;
+        top: 170px !important;
+
+    }
+
+  }
+
+@media(max-width: 934px) {
+    
+    .discover-text {
+        font-size: 2.5em !important;
+        background-color: rgb(152, 222, 135);
+        margin-top: 30px !important;
+    }
+
+    
+    .hero-text-btn {
+        padding: 5px;
+       
+        margin-left: 5px;
+        border-radius: 5px;
+        width: 100px;
+        font-size: 1em;
+        letter-spacing: 1px;
+
+    } 
+
+  }
 
 
 .tour-offer {
@@ -348,6 +382,8 @@ body {
         image-rendering: pixelated;
         /* Safari seems to support, but seems deprecated and does the same thing as the others. */
         image-rendering: -webkit-optimize-contrast;
+        object-fit: cover;
+
     }
 
     #tour-name {  
@@ -456,37 +492,38 @@ body {
 .tour-discover {
     background-color: #ffffff;
     width: 80%;
+    
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     margin: auto;
+    justify-content: space-between;
+
 }
  
 
 .discover-image {
-    //background-color: chartreuse;
+   // background-color: chartreuse;
     width: 50%;
-    min-width: 400px;
-
+    min-width: 450px;
+    display: flex;
+    flex-wrap: wrap;
     img {
-        width: 49%;
-        height: 200px;
+    width: 45%;
+    height: 230px;
+    object-fit: cover;
+    margin: 5px;
+
     }
 }
 
-
-
 .discover-info {
-   background: rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding-left: 10px;
     width: 50%;
-    min-width: 400px;
-
-    img {
-        height: 300px;
-    } 
+    min-width: 420px;
 }
 
 
@@ -501,49 +538,37 @@ body {
     padding: 20px  0px;
 }
 
-.tour-show-photo {
-
-    //background-color: rgb(124, 9, 9);
+.tour-show {
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 80%;
+   // background-color: rgb(124, 9, 9);
     margin: auto;
-
- 
- img {
-    max-width: 600px;
-    max-height: 700px;
-    //height: 450px;
-    border-radius: 5px;
-    image-rendering: auto;
-    image-rendering: crisp-edges;
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-
-    /* Safari seems to support, but seems deprecated and does the same thing as the others. */
- }
+}
 
 
+
+.tour-pic {
+    
+    
+    width: 550px;
+    
+    
+    img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+}
 
 #show-tour-description {
-
-   // background-color: rgb(207, 17, 17) !important;
+    max-width: 45%;
+    min-width: 400px;
+    //background-color: rgb(207, 17, 17) !important;
     overflow-y: scroll;
     line-height: 24px;
-    width: 45%;
     
-    .description-text {
-
-    height: 80%;
-    overflow-y: scroll;
-   // background: cadetblue;
-
-    }
-    .tour-show-btn-wrapper {
-       // background: chartreuse;
-        padding: 10px 0px;
-    }
 }
 
 .tour-region {
@@ -552,52 +577,68 @@ body {
     margin-bottom: 10px;
 }
 
+.description-text {
 
-    .show-tour-details {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin-top: 20px;
-        div {
-            padding: 10px 5px;
-            margin: 10px ;
-        }
-    }
+    overflow-y: scroll;
+    //background: cadetblue;
 
+}
 
-    .tour-show-gallery {
-        border: 1px solid red;
-       
-    }
+.tour-show-btn-wrapper {
+    // background: chartreuse;
+    padding: 10px 0px;
+}
 
+    
 
-    .edit-btn {
+.show-tour-details {
+//background: chartreuse;
+width: 80%;
+display: flex;
+justify-content: space-between;
+margin: auto;
+overflow-x: scroll;
+}
 
-        padding: 10px;
-        background: hotpink;
-        text-decoration: none;
-        color: white;
+.show-tour-detail {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
-    }
+    align-items: center;
+    //border: 1px solid red;
+}
 
-
-    .delete-btn {
-
-        padding: 10px;
-        background: red;
-        text-decoration: none;
-        color: white;
-    }
+.tour-show-gallery {
+    border: 1px solid red;
     
 }
 
 
+.edit-btn {
+
+    padding: 10px;
+    background: hotpink;
+    text-decoration: none;
+    color: white;
+
+}
+
+
+.delete-btn {
+
+    padding: 10px;
+    background: red;
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
 .show-tour-detail {
-    //background-color: rgb(235, 235, 235);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px;
+    background-color: rgb(235, 235, 235);
+margin-top: 50px;
 
 
 
@@ -610,77 +651,138 @@ body {
 
 
 
-.tour-gallery-wrapper {
 
-    //background-color: hotpink ;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 
-    img {
-        border-radius: 5px;
-        margin: 10px;
-        width: 400px;  
-        height: 300px;   
-        /* Safari seems to support, but seems deprecated and does the same thing as the others. */
-        image-rendering: -webkit-optimize-contrast;    
+
+.tour-map-wrapper {
+    width: 50%;
+
+    .tour-map {
+        width: 100%;
+        object-fit: cover;
     }
-  
 }
 
 
+
+
+
+
+
+
+.itinerary {
+    padding: 50px 0px;
+    background: #ffffff;
+}
+
+
+.itinerary-wrapper {
+    background: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+
+.itinerary-details {
+    //background-color: #f15f5f;
+    width: 500px;
+}
+
+
+.itinerary-text {
+    display: flex;
+    flex-wrap: wrap;
+   // background: hsl(303, 84%, 35%);
+
+    h1 {
+        font-weight: 500;        
+        margin: 10px;
+    }
+
+    p {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+.itinerary-number {
+    color: #F47559;
+}
+
+.tour-map {
+    width: 500px;
+    //background-color: #e2df22;
+    object-fit: cover;
+}
+
+
+// .footer-contacts {
+//     background-color: red;
+// }
 
 footer {
     background-color: #57254D;
     color: white;
     padding-top: 150px;
     padding-bottom: 50PX;
-    //margin-top: 140px;
-
-    img {
-        width: 200px;
-       
-    }
-
-
-    .footer-contacts {
-        //background: turquoise;
-
-        .contactus {
-            //font-size: 1.7em;
-            line-height: 26px;
-            font-size: 24px;
-            margin-bottom: 50px;
-        }
-
-        .footer-icons {
-            //font-size: 2em;
-            // letter-spacing: 1px;
-            margin-top: 10px;
-
-        }
-    }
+    //margin-top: 140px
     
+}
+
+// .footer-pic  {
+//     background-color: #fafafa;
+// }
+.footer-logo {
+    //background-color: #F2C854;
+    width: 200px;
 }
 
 
 .socail-wrapper {
-   //background: rgb(31, 219, 24);
-    width: 80%;
-    margin: auto;
-    padding-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    
-    // .footer-contacts {
-    //     //background-color: red;
-    // }
-
-    img {
-        margin-top: 60px;
-
-    }
+  // background: rgb(31, 219, 24);
+   width: 80%;
+     margin: auto;
+     padding-bottom: 20px;
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: space-between;
+     
+     // .footer-contacts {
+     //     //background-color: red;
+     // }
+ 
+     
+ }
+.contactus {
+    //background-color: aqua;
+    //font-size: 1.7em;
+    line-height: 26px;
+    font-size: 24px;
+    margin-bottom: 50px;
 }
+
+.footer-icons {
+    //font-size: 2em;
+    // letter-spacing: 1px;
+    //background-color: cornflowerblue;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    p {
+        margin-left: 10px;
+    }
+    
+}
+
+.footer-social {
+   // background-color: crimson;
+    width: 40px;
+}
+
+
 
 
 
@@ -689,12 +791,12 @@ footer {
 
 /////discover///
 .things-todo-wrapper {
-    //background: rgb(9, 212, 248);
     width: 80%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     padding: 60px 0px;
+    margin-top: 10p;
 
 }
 
@@ -704,31 +806,51 @@ footer {
 .todo-image {
     width: 50%;
     min-width: 400px;
+    height: 500px;
+    object-fit: cover;
+
     
 }
 
-
-
-
-
-.todo-text1 {
-   background: rgb(255, 255, 255);
-    width: 50%;
+.favourite-things {
+    background: rgb(255, 255, 255);
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    width: 50%;
     min-width: 400px;
-    padding-left: 40px ;
-    padding-top: 40px;
+
+   
+}
+
+.todo-triangle {
+    
+    height: 200px;
 
 }
+
+.todo-text {
+   //background-color: cyan;
+    display: flex; 
+}
+
+
+
+
+
 
 
 .number {
     font-size: 4rem;
     color: #F47559;
     font-weight: 900;
-  // background-color: red;
+ // background-color: rgb(0, 255, 106);
+
+}
+
+
+.todo-info {
+    padding: 0px 20px 20px;
 }
 
 #yellow-number {
@@ -741,18 +863,62 @@ footer {
 
 }
 
-
-.todo-info {
-    //background: palegreen;
-    padding-top: 8px;
-    width: 60%;
-  
-}
 .todo-heading {
     font-weight: 400;
-    margin-bottom: 20px
+    padding: 10px 0px;
 }
 
-.todo-triangle {
-    width: 20%;
+
+
+
+//Login form
+
+.login-heading {
+    text-align: center;
+    margin: 50px 0px;
+    font-weight: 400;
+}
+.new_user {
+    background: #ffffff;
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    font-size: 1.3em;
+    margin-bottom: 120px;
+
+    input[type=submit] {
+        font-size: 14px;
+        margin: 20px 0px;
+        padding: 10px;
+
+    }
+
+}
+
+.field {
+   // background: #F2C854;
+
+    
+    input {
+        width: 100%;
+        margin: 20px 0px;
+        font-size: 1em;
+
+
+    }
+
+
+    input[type=checkbox] {
+        width: 15px;
+    }
+    input[type=email], input[type=password] {
+        
+        height: 40px;
+    }
+   
+
+
+  
+
+
 }
