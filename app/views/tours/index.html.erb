@@ -48,7 +48,11 @@
                 <p class="tour-name"><%= tour.name.capitalize %></p>
             </div>
 
-            <p class="tour-sites">Tafi monkey sanctury - Shai hills -  Wli water falls - Afajato </p>
+            <div class="index-sites">
+                <% tour.sites.each do |site| %>
+                        <%= site.name %> 
+                <% end %>
+            </div>
 
             <div id="read-more">
                 <%= link_to "read more ", tour_path(tour), class: "read-more" %>

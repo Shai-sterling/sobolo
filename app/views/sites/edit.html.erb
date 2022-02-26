@@ -1,0 +1,17 @@
+<%= form_with model: [@tour, @site] do |form| %>
+    
+    <p><%= form.label :name %></p>
+    <%= form.text_field :name %>
+
+    <p><%= form.label :description %></p>
+    <%= form.text_area :description %>
+
+
+    <div>
+        <%= form.submit "add Site", class: "tour-btn" %>
+    </div>
+
+<% end %>
+
+
+<%= link_to "Back", tour_path(@tour) %>

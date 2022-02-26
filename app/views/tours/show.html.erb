@@ -23,44 +23,78 @@
             <% end%>
 
         </div>
-    </div>
-    
-        <div class="show-tour-details">
-        
-            <div class="show-tour-detail">
-                <%= number_to_currency( @tour.price, unit: "€" )  %>
+    </div>    
+
+
+
+    <div class="sites-wrapper">
+        <% @tour.sites.each do |site| %>
+
+            <div class="show-site">
+                <%= site.name %>
+
+                <%= link_to "edit", edit_tour_site_path(@tour, site) %> 
+                <%= link_to "delete", [@tour, site], method: :delete, data: { confirm: "are you sure?"} %></p> 
             </div>
 
-            <div class="show-tour-detail">
-                <%= @tour.duration > 1 ? "#{@tour.duration}  days trip" : " 1 day trip" %>
+        <% end %>
+    </div>
+
+
+
+    <div class="site-form-wrapper">
+        <%= form_with model: [@tour, @tour.sites.build] do |form| %>
+            <p><%= form.label :name %></p>
+            <%= form.text_field :name %>
+
+            <p><%= form.label :description %></p>
+            <%= form.text_area :description %>
+
+            <div>
+                <%= form.submit "add Site", class: "tour-btn" %>
             </div>
-            
-            <div class="show-tour-detail">
-                <%= image_tag("soup") %>
-                <%= @tour.meals? ? "Meals" : "No meals available" %>
-            </div>
-            
-            <div class="show-tour-detail">
-                <%= image_tag("ticket") %>
-                <%= @tour.entry_tickets? ? "Tickets" : "No Tickets"  %>
-            </div>
-            
-            <div class="show-tour-detail">
-                <%= image_tag("bed") %>
-                <%= @tour.accommodation? ? "Accommodation" : "No accommodation " %>      
-            </div>
-            
-            <div class="show-tour-detail">
-                <%= image_tag("pickup") %>
-                <%= @tour.pick_up? ? "Pickup" : "No pickup available"%>
-            </div>
-            
-            <div class="show-tour-detail">
-                <%= image_tag("bus") %>
-                <%= @tour.transport? ? "Transport" : "No transport " %> 
-            </div>
-            
-        </div> 
+
+        <% end %>
+    </div>
+
+
+
+
+    <div class="show-tour-details">
+        <div class="show-tour-detail">
+            <%= number_to_currency( @tour.price, unit: "€" )  %>
+        </div>
+
+        <div class="show-tour-detail">
+            <%= @tour.duration > 1 ? "#{@tour.duration}  days trip" : " 1 day trip" %>
+        </div>
+        
+        <div class="show-tour-detail">
+            <%= image_tag("soup") %>
+            <%= @tour.meals? ? "Meals" : "No meals available" %>
+        </div>
+        
+        <div class="show-tour-detail">
+            <%= image_tag("ticket") %>
+            <%= @tour.entry_tickets? ? "Tickets" : "No Tickets"  %>
+        </div>
+        
+        <div class="show-tour-detail">
+            <%= image_tag("bed") %>
+            <%= @tour.accommodation? ? "Accommodation" : "No accommodation " %>      
+        </div>
+        
+        <div class="show-tour-detail">
+            <%= image_tag("pickup") %>
+            <%= @tour.pick_up? ? "Pickup" : "No pickup available"%>
+        </div>
+        
+        <div class="show-tour-detail">
+            <%= image_tag("bus") %>
+            <%= @tour.transport? ? "Transport" : "No transport " %> 
+        </div>  
+    </div>        
+       
 </div>
 
 
@@ -118,4 +152,12 @@
 
 
 
-<%= link_to "back", tours_path %>
+<%#= link_to "back", tours_path %>
+
+
+
+
+
+
+
+

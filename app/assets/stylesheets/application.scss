@@ -14,15 +14,11 @@
  *= require_self
  */
 
-
-
- 
- * { 
+* { 
     margin:0;
     padding: 0;
     box-sizing: border-box;
-     
-    }
+}
 
 html {
     scroll-behavior: smooth;
@@ -30,19 +26,14 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #fafafa;
-   
+    background-color: #fafafa;  
 }
 
-
 //Navigation//
-
-
 .nav-wrapper {
     background: #ffffff;
     position: relative;
 }
-
 
 .nav-items {
     width: 80%;
@@ -52,17 +43,14 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0px;
-    
 }
 
 .nav-links {
-
     background: yellow;
     align-items: center;
     padding: 10px;
 
     a {
-        
         text-decoration: none;
         font-size: 20px;
         font-weight: 500;
@@ -70,20 +58,15 @@ body {
         color: black;
         text-align: center;
         margin: 10px;
-
     }
   
-
-
     .login {
         border-radius: 5px;
         border: 2px solid #75C093;
         color: #75C093;
         text-align: center;
         padding: 5px;
-       
     }
-
 
     .sign-up {
         border-radius: 5px;
@@ -91,18 +74,10 @@ body {
         color: #ED6749;
         text-align: center;
         padding: 5px;
-
     } 
 }
 
-
-
-
-
-
-  
  //-----------Tour  new form ----------//
-
 
 .tour {
     width: 80%;
@@ -117,11 +92,9 @@ body {
     margin-bottom: 30px;
     margin-top: 30px;
 
-
     input[type="text"] {
         width: 100%;
         padding: 5px;
-
     }
     
     .tour-forrm-err {
@@ -144,7 +117,6 @@ body {
         width: 300px;
         //background: rgb(9, 255, 0);
         overflow-x: hidden;
-
         select {
             padding: 5px;
             font-family: 'Montserrat', sans-serif;
@@ -152,19 +124,16 @@ body {
 
     }
 
-
     .tour-description {
         margin-top:30px ;
         //background: lightcoral;
         width: 100%;
-
 
         textarea {
             width: 100%;
             height: 300px;
             font-size: 1.2em;
             font-family: 'Montserrat', sans-serif;
-
         }
     }
 
@@ -172,7 +141,6 @@ body {
         width: 100%;
         //background-color: khaki;
         padding: 5px;
-
         .tour-btn {
             padding: 10px;
             border: none;
@@ -184,7 +152,6 @@ body {
         
     }
 }
-
 
  //------------Tour Index ---------------//
 
@@ -206,17 +173,14 @@ body {
         opacity: none; 
     }
 
-
     .hero-text {
         color: white;
         position: absolute;
         top: 200px ;
        //background-color: #ED6749;
         width: 80%; 
-        padding: 20px 0px; 
-       
+        padding: 20px 0px;    
     }
-    
     
     .discover-text {
         font-family: 'Montserrat', sans-serif;
@@ -262,7 +226,6 @@ body {
         font-size: 3em !important;
         background-color: burlywood;
         top: 170px !important;
-
     }
 
   }
@@ -275,20 +238,28 @@ body {
         margin-top: 30px !important;
     }
 
-    
     .hero-text-btn {
         padding: 5px;
-       
         margin-left: 5px;
         border-radius: 5px;
         width: 100px;
         font-size: 1em;
         letter-spacing: 1px;
-
     } 
 
   }
 
+
+
+.index-sites{
+    //background-color: salmon;
+    display: flex;
+    padding: 0 20px;
+    font-size: 1.1em;
+    font-weight: 500;
+    line-height: 24px;
+
+}
 
 .tour-offer {
     width: 80%;
@@ -298,17 +269,12 @@ body {
     margin: auto;
     padding: 30px 0px;
 
-
-
     .sustainable-icons {
-
         text-align: center;
-
 
         img {
             height: 30px;
         }
-
 
         h5 {
             font-weight: 500;
@@ -317,9 +283,7 @@ body {
         }
     }
 
-
 }
-
 
 //  Find tours on Index //
 
@@ -395,18 +359,12 @@ body {
         width: 100%;
     }
     
-    .tour-sites {
-        padding: 0 20px;
-        font-size: 1.1em;
-        font-weight: 500;
-        line-height: 24px;
-    }
+ 
 
     .tour-card-details {
         padding: 30px 20px 0px 20px ;
         //padding: 10px;
-        line-height: 28px;
-        
+        line-height: 28px;    
     }
 
     .tour-card-item {
@@ -430,18 +388,15 @@ body {
        // background: hotpink;
         padding: 10px 20px 5px 20px;
     }
-
-    
+  
 }
 
 .team-back {
-
     background: url("coconuts.png");
     background-position: center;
     background-repeat: no-repeat ;
     background-size: cover;
 }
-
 
 .team-wrapper {
     width: 80%;
@@ -462,7 +417,6 @@ body {
     width: 28%;
     min-width: 350px;
     box-shadow: 1px 2px 13px 2px rgba(0, 0, 0, 0.15);
-    
     margin: 34px 0px;
 
     img {
@@ -481,9 +435,6 @@ body {
 
 }
 
-
-
-
 .tour-discover-wrapper {
     width: 100%;
     padding: 100px 0px;
@@ -491,13 +442,11 @@ body {
 
 .tour-discover {
     background-color: #ffffff;
-    width: 80%;
-    
+    width: 80%;  
     display: flex;
     flex-wrap: wrap;
     margin: auto;
     justify-content: space-between;
-
 }
  
 
@@ -512,12 +461,11 @@ body {
     height: 230px;
     object-fit: cover;
     margin: 5px;
-
     }
 }
 
 .discover-info {
-  background: rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -525,11 +473,6 @@ body {
     width: 50%;
     min-width: 420px;
 }
-
-
-
-
-
 
 // tour show //
 
@@ -547,14 +490,8 @@ body {
     margin: auto;
 }
 
-
-
-.tour-pic {
-    
-    
-    width: 550px;
-    
-    
+.tour-pic { 
+    width: 550px;   
     img {
         width: 100%;
         height: 400px;
@@ -567,8 +504,7 @@ body {
     min-width: 400px;
     //background-color: rgb(207, 17, 17) !important;
     overflow-y: scroll;
-    line-height: 24px;
-    
+    line-height: 24px;   
 }
 
 .tour-region {
@@ -578,7 +514,6 @@ body {
 }
 
 .description-text {
-
     overflow-y: scroll;
     //background: cadetblue;
 
@@ -588,8 +523,6 @@ body {
     // background: chartreuse;
     padding: 10px 0px;
 }
-
-    
 
 .show-tour-details {
 //background: chartreuse;
@@ -604,7 +537,6 @@ overflow-x: scroll;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
     align-items: center;
     //border: 1px solid red;
 }
@@ -614,16 +546,13 @@ overflow-x: scroll;
     
 }
 
-
 .edit-btn {
-
     padding: 10px;
     background: hotpink;
     text-decoration: none;
     color: white;
 
 }
-
 
 .delete-btn {
 
@@ -633,15 +562,9 @@ overflow-x: scroll;
     color: white;
 }
 
-
-
-
 .show-tour-detail {
     background-color: rgb(235, 235, 235);
-margin-top: 50px;
-
-
-
+    margin-top: 50px;
     img {
         height: 30px;
         margin-right: 10px;
@@ -649,9 +572,27 @@ margin-top: 50px;
 }
 
 
+.sites-wrapper {
+
+    width: 80%;
+    //background-color: red;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+}
 
 
-
+.show-site {
+   // background-color: seagreen;
+    margin-right: 15px;
+    font-size: 20px;
+}
+.site-form-wrapper {
+    //background-color: rgb(22, 150, 255);
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
 
 
 .tour-map-wrapper {
@@ -662,13 +603,6 @@ margin-top: 50px;
         object-fit: cover;
     }
 }
-
-
-
-
-
-
-
 
 .itinerary {
     padding: 50px 0px;
@@ -689,7 +623,6 @@ margin-top: 50px;
     //background-color: #f15f5f;
     width: 500px;
 }
-
 
 .itinerary-text {
     display: flex;
@@ -717,7 +650,6 @@ margin-top: 50px;
     object-fit: cover;
 }
 
-
 // .footer-contacts {
 //     background-color: red;
 // }
@@ -727,8 +659,7 @@ footer {
     color: white;
     padding-top: 150px;
     padding-bottom: 50PX;
-    //margin-top: 140px
-    
+    //margin-top: 140px  
 }
 
 // .footer-pic  {
@@ -738,7 +669,6 @@ footer {
     //background-color: #F2C854;
     width: 200px;
 }
-
 
 .socail-wrapper {
   // background: rgb(31, 219, 24);
@@ -753,8 +683,7 @@ footer {
      // .footer-contacts {
      //     //background-color: red;
      // }
- 
-     
+   
  }
 .contactus {
     //background-color: aqua;
@@ -783,12 +712,6 @@ footer {
 }
 
 
-
-
-
-
-
-
 /////discover///
 .things-todo-wrapper {
     width: 80%;
@@ -799,9 +722,6 @@ footer {
     margin-top: 10p;
 
 }
-
-
-
 
 .todo-image {
     width: 50%;
@@ -834,12 +754,6 @@ footer {
     display: flex; 
 }
 
-
-
-
-
-
-
 .number {
     font-size: 4rem;
     color: #F47559;
@@ -847,7 +761,6 @@ footer {
  // background-color: rgb(0, 255, 106);
 
 }
-
 
 .todo-info {
     padding: 0px 20px 20px;
@@ -868,9 +781,6 @@ footer {
     padding: 10px 0px;
 }
 
-
-
-
 //Login form
 
 .login-heading {
@@ -878,6 +788,7 @@ footer {
     margin: 50px 0px;
     font-weight: 400;
 }
+
 .new_user {
     background: #ffffff;
     width: 50%;
@@ -897,8 +808,6 @@ footer {
 
 .field {
    // background: #F2C854;
-
-    
     input {
         width: 100%;
         margin: 20px 0px;
@@ -906,7 +815,6 @@ footer {
 
 
     }
-
 
     input[type=checkbox] {
         width: 15px;
@@ -916,9 +824,4 @@ footer {
         height: 40px;
     }
    
-
-
-  
-
-
 }
