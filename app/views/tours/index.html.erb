@@ -1,10 +1,11 @@
-<div class="hero-container">
-    <div class="hero-background"></div>
-    <div class="hero-text">
+<div class="hero-container" data-controller="hero">
+    <div class="hero-background" data-hero-target="background"></div>
+    <div class="hero-text" data-action="mouseover->hero#mouse mouseout->hero#out">
         <h1 class="discover-text">Discover Ghana with the locals</h1> 
         <button class="hero-text-btn"><a href="#find-tours">view tours</a></button>
         <button id="discover-ghana-btn" class="hero-text-btn"><%= link_to "discover Ghana", discover_path %></button>
     </div> 
+
 </div>
 
 <div class="tour-offer">
@@ -38,7 +39,7 @@
     </div> 
 </section>
 
-<div class="tour-container">
+<div class="tour-container" >
     <% @tours.each do |tour| %>
         <div class="tour-card">
             
@@ -128,3 +129,13 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+<!-- 
+<div data-controller="menu">
+
+
+</div> -->
