@@ -1,14 +1,15 @@
 <nav class="nav-wrapper">
   <div class="nav-items">
 
-    <div class="burger-wrapper">
-      <div class="burger"></div>
-      <div class="burger"></div>
-      <div class="burger"></div>
+    <div class="logo-burger-wrapper">
+      <div id="burger-wrapper" class="burger-wrapper" data-controller="side-nav" data-action="click->side-nav#openNav">
+        <div class="burger"></div>
+        <div class="burger"></div>
+        <div class="burger"></div>
+      </div>
+      <%= link_to image_tag("sobolo.png", class: "logo", alt: "logo"), root_path %>
     </div>
 
-    <%= link_to image_tag("sobolo.png", class: "logo", alt: "logo"), root_path %>
-    
     <div class="nav-links">
       <%= link_to "Home", root_path %>
       <%= link_to "All Tours", tours_path %>
@@ -21,7 +22,6 @@
         <%= link_to "sign up", new_user_registration_path, class: "sign-up" %>
         <%= link_to "login", new_user_session_path, class:"login" %>
       <% end %>
-
     </div>
   </div>
 </nav>

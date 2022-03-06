@@ -15,7 +15,6 @@ export default class extends Controller {
   }
 
   mouse(event) {
-    console.log(this.backgroundTarget);
     this.backgroundTarget.style.background = "black"
     this.backgroundTarget.style.opacity = "0.4"
     this.backgroundTarget.style.transition = "1.2s"
