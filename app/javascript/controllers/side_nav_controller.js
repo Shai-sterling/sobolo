@@ -5,8 +5,7 @@ export default class extends Controller {
   static targets = [ "output" ]
 
   connect() {
-    console.log("Hello, Stimulus!", this.element)
-    console.log("side nav at best");
+     console.log("Hello, Stimulus!", this.element)
   }
 
 
@@ -30,14 +29,11 @@ export default class extends Controller {
         sideLinks.style.display = "block"
         sideLinks.style.transition = "3"
 
-        console.log("opening!!!");
-
-        console.log(sideLinks);
-
+     
     }
 
     closeNav() {
-        console.log("closing nav");
+       // console.log("closing nav");
         const bugerWrapper = document.getElementById("burger-wrapper")
 
         const sidenav = document.getElementById("side-nav")

@@ -8,7 +8,6 @@
         <% end %>
         
         <div id="show-tour-description" class="show-tour-description">
-            
             <p class="tour-region"><%= @tour.name.capitalize %> Region</p>
 
             <div class="description-text">
@@ -21,80 +20,46 @@
                     <%= link_to "delete", tour_path(@tour), method: :delete, data: { confirm: "are you sure?"}, class:"delete-btn" %>
                 </div>  
             <% end%>
-
         </div>
+        
+        <div class="show-tour-details">
+            <div class="show-tour-detail">
+                <%= number_to_currency( @tour.price, unit: "€" )  %>
+            </div>
+    
+            <div class="show-tour-detail">
+                <%= @tour.duration > 1 ? "#{@tour.duration}  days trip" : " 1 day trip" %>
+            </div>
+            
+            <div class="show-tour-detail">
+                <%= image_tag("soup") %>
+                <%= @tour.meals? ? "Meals" : "No meals available" %>
+            </div>
+            
+            <div class="show-tour-detail">
+                <%= image_tag("ticket") %>
+                <%= @tour.entry_tickets? ? "Tickets" : "No Tickets"  %>
+            </div>
+            
+            <div class="show-tour-detail">
+                <%= image_tag("bed") %>
+                <%= @tour.accommodation? ? "Accommodation" : "No accommodation " %>      
+            </div>
+            
+            <div class="show-tour-detail">
+                <%= image_tag("pickup") %>
+                <%= @tour.pick_up? ? "Pickup" : "No pickup available"%>
+            </div>
+            
+            <div class="show-tour-detail">
+                <%= image_tag("bus") %>
+                <%= @tour.transport? ? "Transport" : "No transport " %> 
+            </div>  
+        </div>   
     </div>    
 
+    <%= render "sites" %>
 
-
-    <div class="sites-wrapper">
-        <% @tour.sites.each do |site| %>
-
-            <div class="show-site">
-                <%= site.name %>
-
-                <%= link_to "edit", edit_tour_site_path(@tour, site) %> 
-                <%= link_to "delete", [@tour, site], method: :delete, data: { confirm: "are you sure?"} %></p> 
-            </div>
-
-        <% end %>
-    </div>
-
-
-
-    <div class="site-form-wrapper">
-        <%= form_with model: [@tour, @tour.sites.build] do |form| %>
-            <p><%= form.label :name %></p>
-            <%= form.text_field :name %>
-
-            <p><%= form.label :description %></p>
-            <%= form.text_area :description %>
-
-            <div>
-                <%= form.submit "add Site", class: "tour-btn" %>
-            </div>
-
-        <% end %>
-    </div>
-
-
-
-
-    <div class="show-tour-details">
-        <div class="show-tour-detail">
-            <%= number_to_currency( @tour.price, unit: "€" )  %>
-        </div>
-
-        <div class="show-tour-detail">
-            <%= @tour.duration > 1 ? "#{@tour.duration}  days trip" : " 1 day trip" %>
-        </div>
-        
-        <div class="show-tour-detail">
-            <%= image_tag("soup") %>
-            <%= @tour.meals? ? "Meals" : "No meals available" %>
-        </div>
-        
-        <div class="show-tour-detail">
-            <%= image_tag("ticket") %>
-            <%= @tour.entry_tickets? ? "Tickets" : "No Tickets"  %>
-        </div>
-        
-        <div class="show-tour-detail">
-            <%= image_tag("bed") %>
-            <%= @tour.accommodation? ? "Accommodation" : "No accommodation " %>      
-        </div>
-        
-        <div class="show-tour-detail">
-            <%= image_tag("pickup") %>
-            <%= @tour.pick_up? ? "Pickup" : "No pickup available"%>
-        </div>
-        
-        <div class="show-tour-detail">
-            <%= image_tag("bus") %>
-            <%= @tour.transport? ? "Transport" : "No transport " %> 
-        </div>  
-    </div>        
-       
 </div>
 
 
@@ -105,57 +70,6 @@
     </div> 
 </section>
 
-<div class="itinerary">
-    <% if @tour.name == "volta" %>
-        <div class="itinerary-wrapper">
-    
-            <div class="tour-map-wrapper">
-                <%= image_tag "voltamap", class: "tour-map" %>
-            </div>
-    
-            <div class="itinerary-details">
-                <div class="itinerary-text">
-                    <h1 class="itinerary-number">1</h1>
-                    <h1> Accra Pick up</h1>
-                    <p> To leave the Accra region and get to Volta we have to cross the Volta lake, the biggest man-made lake in West Africa. After a coupld hours of travellins it’s the perfect chance to rest and enjoy a boat tour on the lake. The boats can come with music and drinks, so you can have a little private party on the lake for half an hour. </p>
-                </div>
-    
-                <div class="itinerary-text">
-                    <h1 class="itinerary-number">2</h1>
-                    <h1> Accra Pick up</h1>
-                    <p> To leave the Accra region and get to Volta we have to cross the Volta lake, the biggest man-made lake in West Africa. After a coupld hours of travellins it’s the perfect chance to rest and enjoy a boat tour on the lake. The boats can come with music and drinks, so you can have a little private party on the lake for half an hour. </p>
-                </div>
-    
-                <div class="itinerary-text">
-                    <h1 class="itinerary-number">3</h1>
-                    <h1>Accra Pivck up</h1>
-                    <p> To leave the Accra region and get to Volta we have to cross the Volta lake, the biggest man-made lake in West Africa. After a coupld hours of travellins it’s the perfect chance to rest and enjoy a boat tour on the lake. The boats can come with music and drinks, so you can have a little private party on the lake for half an hour. </p>
-                </div>
-    
-                <div class="itinerary-text">
-                    <h1 class="itinerary-number">4</h1>
-                    <h1> Accra Pick up</h1>
-                    <p> To leave the Accra region and get to Volta we have to cross the Volta lake, the biggest man-made lake in West Africa. After a coupld hours of travellins it’s the perfect chance to rest and enjoy a boat tour on the lake. The boats can come with music and drinks, so you can have a little private party on the lake for half an hour. </p>
-                </div>
-    
-                <div class="itinerary-text">
-                    <h1 class="itinerary-number">5</h1>
-                    <h1> Accra Pick up</h1>
-                    <p> To leave the Accra region and get to Volta we have to cross the Volta lake, the biggest man-made lake in West Africa. After a coupld hours of travellins it’s the perfect chance to rest and enjoy a boat tour on the lake. The boats can come with music and drinks, so you can have a little private party on the lake for half an hour. </p>
-                </div>
-            </div>
-        </div>
-    <% end %>
-</div>    
 
 
-
-<%#= link_to "back", tours_path %>
-
-
-
-
-
-
-
-
+<%= render "itinerary" %>

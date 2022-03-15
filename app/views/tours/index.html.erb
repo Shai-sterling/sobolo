@@ -39,9 +39,9 @@
     </div> 
 </section>
 
-<div class="tour-container" >
+<div class="tour-container" data-controller="tour-card" data-action="mouseenter->tour-card#mouse">
     <% @tours.each do |tour| %>
-        <div class="tour-card">
+        <div class="tour-card" data-tour-card-target="card">
             
             <%= image_tag(tour.image) %>
 
@@ -82,8 +82,9 @@
             <%= image_tag"janet" %>
             <p class="team-name">Janet</p>
             <div class="team-info">
-                <p>Our tours are designed for small groups of 4-5 people, so that we can keep them flexible and tailor them for you along the way.</p>
-                <p>From the pick-up at your accomodation we will take care of every aspect of the tour, so you don’t need to carry a cent with you.</p>
+                <p>
+                     Born and raised in downtown Accra, Janet is a caterer by profession who enjoys teaching visitors authentic Ghanaian recipees. When she is not  not managing events, she loves dancing and having parties at the beach.  She has the best tips if you want to discover the best food joints and shops in Accra.
+                </p>
             </div>
         </div>
 
@@ -91,8 +92,9 @@
             <%= image_tag"edem.jpeg" %>
             <p class="team-name">Edem</p>
             <div class="team-info">
-                <p>Our tours are designed for small groups of 4-5 people, so that we can keep them flexible and tailor them for you along the way.</p>
-                <p>From the pick-up at your accomodation we will take care of every aspect of the tour, so you don’t need to carry a cent with you.</p>
+                <p>
+                     Born and raised in downtown Accra, Janet is a caterer by profession who enjoys teaching visitors authentic Ghanaian recipees. When she is not  not managing events, she loves dancing and having parties at the beach.  She has the best tips if you want to discover the best food joints and shops in Accra.
+                </p>
             </div>
         </div>
         
@@ -117,7 +119,7 @@
 <div class="tour-discover-wrapper">
     <div class="tour-discover">
         <div class="discover-image">
-            <%= image_tag "chilling" %>
+            <%= image_tag "robiwalk" %>
             <%= image_tag "veggies" %>
             <%= image_tag "ele" %>
             <%= image_tag "beads" %>
@@ -134,8 +136,3 @@
 
 
 
-<!-- 
-<div data-controller="menu">
-
-
-</div> -->

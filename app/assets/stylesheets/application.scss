@@ -110,6 +110,13 @@ body {
      }
 }
 
+@media(min-width: 983px) {
+    .burger-wrapper {
+        display: none !important;
+         
+     }
+}
+
 .logo-burger-wrapper {
     display: flex;
     align-items: center;
@@ -256,7 +263,7 @@ body {
  //------------Tour Index ---------------//
 
 .hero-container {
-    background: url("rock.jpeg");
+    background: url("rock.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover ;
@@ -289,8 +296,8 @@ body {
 
     }
        #discover-ghana-btn {
-           background: none;
-           border: 1px solid white;
+           background: rgba(236, 236, 236, 0.096);
+           border: 1px solid rgba(255, 255, 255, 0.562);
            margin-left: 30px;
 
            a {
@@ -429,11 +436,10 @@ body {
 }
 
 .tour-card {
-    //background: rgb(133, 45, 45);
+    background: rgb(255, 255, 255);
     width: 30%;
     min-width: 350px;
     padding-bottom: 10px;
-    margin: 34px 0px;
     //overflow: hidden;
     border-radius: 5px;
     box-shadow: 1px 2px 13px 2px rgba(0, 0, 0, 0.15);
@@ -586,23 +592,44 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-   // background-color: rgb(124, 9, 9);
+    //background-color: rgb(124, 9, 9);
     margin: auto;
 }
 
 .tour-pic { 
-    width: 550px;   
+    width: 50%;   
+    min-width: 400px;
+   // background-color: yellow;
     img {
         width: 100%;
-        height: 400px;
         object-fit: cover;
+        height: 400px;
+
     }
+}
+
+@media(max-width: 999px) {
+    
+    .show-tour-description {
+        margin-top: 30px;
+        width: 100% !important;
+       // background: rgb(0, 255, 76);
+    }
+
+    .tour-pic { 
+        //background-color: rgb(45, 149, 209);
+        width: 100%;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
 }
 
 #show-tour-description {
     max-width: 45%;
     min-width: 400px;
-    //background-color: rgb(207, 17, 17) !important;
     overflow-y: scroll;
     line-height: 24px;   
 }
@@ -620,31 +647,47 @@ body {
 }
 
 .tour-show-btn-wrapper {
-    // background: chartreuse;
+   // background: rgb(189, 10, 114);
     padding: 10px 0px;
 }
 
 .show-tour-details {
-//background: chartreuse;
-width: 80%;
-display: flex;
-justify-content: space-between;
-margin: auto;
-overflow-x: scroll;
+    //background: rgb(73, 194, 128);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .show-tour-detail {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    //border: 1px solid red;
-}
+    margin: 20px 30px 10px 0px;
+    background: #ffff003b;
 
-.tour-show-gallery {
-    border: 1px solid red;
+    img {
+        margin-right: 10px;
+    }
     
 }
+
+
+@media(max-width: 999px) {
+    
+    .show-tour-details {
+        width: 250px;
+        margin: 0px !important;
+        margin-top: 30px !important;
+
+        
+    }  
+
+}
+
+// .tour-show-gallery {
+//     border: 1px solid red;
+    
+// }
 
 .edit-btn {
     padding: 10px;
@@ -662,14 +705,8 @@ overflow-x: scroll;
     color: white;
 }
 
-.show-tour-detail {
-    background-color: rgb(235, 235, 235);
-    margin-top: 50px;
-    img {
-        height: 30px;
-        margin-right: 10px;
-    }
-}
+
+
 
 
 .sites-wrapper {
@@ -697,7 +734,7 @@ overflow-x: scroll;
 
 .tour-map-wrapper {
     width: 50%;
-
+    min-width: 400px;
     .tour-map {
         width: 100%;
         object-fit: cover;
@@ -720,24 +757,28 @@ overflow-x: scroll;
 }
 
 .itinerary-details {
-    //background-color: #f15f5f;
-    width: 500px;
+   // background-color: #f15f5f;
+    width: 40%;
+    min-width: 400px;
+    padding: 10px;
 }
 
 .itinerary-text {
     display: flex;
     flex-wrap: wrap;
    // background: hsl(303, 84%, 35%);
+    width: 100%;
 
     h1 {
-        font-weight: 500;        
+        font-weight: 300;        
         margin: 10px;
     }
 
     p {
-        width: 100%;
-        padding: 10px;
+        margin-top: 5px;
     }
+
+   
 }
 
 .itinerary-number {
@@ -790,7 +831,7 @@ footer {
     //font-size: 1.7em;
     line-height: 26px;
     font-size: 24px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .footer-icons {
@@ -807,8 +848,8 @@ footer {
 }
 
 .footer-social {
-   // background-color: crimson;
-    width: 40px;
+    width: 20px;
+    color: white;
 }
 
 
@@ -925,3 +966,131 @@ footer {
     }
    
 }
+
+
+
+// Houses for tourist to stay in 
+
+.house-wrapper {
+    //background: #ec5c5c;
+    padding: 80px 0px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.stay-wrapper{
+    width: 80%;
+    //background: #4cb91a;
+    margin: auto;
+
+}
+
+
+
+.volta-house {
+    width: 50%;
+    min-width: 300px;
+    height: 350px;
+    object-fit: cover;
+    float: left;
+
+}
+.volta-house-info {
+    background: rgb(255, 255, 255);
+    height: 350px;
+    width: 50%;
+    float: right;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    overflow: scroll;
+
+    
+}
+
+.oasis-house {
+    width: 50%;
+    min-width: 300px;
+    height: 350px;
+    object-fit: cover;
+    float: left;
+
+}
+
+.oasis-house-info {
+   // background: rgb(6, 189, 113);
+   height: 350px;
+   width: 50%;
+    float: left;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: rgb(255, 255, 255);
+    overflow: scroll;
+
+}
+
+
+
+.kokrobite-house {
+    width: 50%;
+    min-width: 300px;
+    height: 350px;
+    object-fit: cover;
+    float: right;
+}
+
+.kokrobite-house-info {
+  //  background: rgb(149, 189, 6);
+  height: 350px;
+  width: 50%;
+    float: left;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: rgb(255, 255, 255);
+    overflow: scroll;
+
+}
+
+
+@media(max-width: 750px) {
+    .stay-wrapper{       
+        height: 230vh;
+    }
+
+    .volta-house {
+        width: 100%;
+    }
+
+    .volta-house-info {
+        width: 100%;
+        align-items: flex-start;
+        height: auto;    
+    }
+
+    .kokrobite-house {
+        width: 100%; 
+        float: none;
+    }
+    .kokrobite-house-info {
+        width: 100%;
+        align-items: flex-start;
+        height: auto;   
+    }
+
+    .oasis-house {
+        width: 100%;
+        float: none;
+    }
+    .oasis-house-info {
+        width: 100%;
+        align-items: flex-start;
+        height: auto;   
+    }
+
+}
+
+

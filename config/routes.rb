@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     end
 
 
-
+get "stay", to: "house#stay"
 
 
     root "tours#index"
