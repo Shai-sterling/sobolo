@@ -610,16 +610,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    width: 50%;
-    min-width: 350px;
+ 
+    width: 46%;
+    min-width: 340px;
 
 
     .todo-heading{
         text-decoration: none;
         color: black;
         font-size: 2em;
-        //background: blue;
         width: 350px;
     }
 }
@@ -873,7 +872,7 @@ body {
 // }
 
 footer {
-    background-color: #57254D;
+    background-color: #381A31;
     color: white;
     padding-top: 150px;
     padding-bottom: 50PX;
@@ -949,7 +948,7 @@ footer {
 .todo-pic {
     height: 400px;
     width: 50%;
-    min-width: 400px;
+    //min-width: 400px;
     background-color: steelblue;
 }
 
@@ -972,7 +971,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-width: 400px;
 }
 
 @media(max-width: 998px) {
@@ -1059,11 +1057,13 @@ footer {
 // Houses for tourist to stay in 
 
 .house-wrapper {
-    //background: #ec5c5c;
-    padding: 80px 0px;
+   // background: #ec5c5c;
     display: flex;
     align-items: center;
     margin-top: 100px;
+    padding: 80px 0px;
+    height: auto;
+
 }
 
 
@@ -1093,7 +1093,6 @@ footer {
     display: flex;
     align-items: center;
     padding: 20px;
-    overflow: scroll;
 
     
 }
@@ -1116,7 +1115,6 @@ footer {
     align-items: center;
     padding: 20px;
     background: rgb(255, 255, 255);
-    overflow: scroll;
 
 }
 
@@ -1132,14 +1130,13 @@ footer {
 
 .kokrobite-house-info {
   //  background: rgb(149, 189, 6);
-  height: 350px;
-  width: 50%;
+    height: 350px;
+    width: 50%;
     float: left;
     display: flex;
     align-items: center;
     padding: 20px;
     background: rgb(255, 255, 255);
-    overflow: scroll;
 
 }
 
