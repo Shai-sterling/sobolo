@@ -30,7 +30,7 @@
     </div>
 </div>
 
-<section style="width: 100%; background: white">
+<section style="width: 100%; background: white;">
     <div id="find-tours" class="find-tour">
         <%= image_tag "colors.png", alt: "colors" %>
         <p class="adventure">Find your next adventure </p>
@@ -43,7 +43,7 @@
     <% @tours.each do |tour| %>
         <div class="tour-card" data-tour-card-target="card">
             
-            <%= image_tag(tour.image) %>
+            <%= link_to image_tag(tour.image), tour_path(tour) %>
 
             <div class="" id="tour-name">
                 <p class="tour-name"><%= tour.name.capitalize %></p>
@@ -113,7 +113,9 @@
     <div id="find-tours" class="find-tour">
         <%= image_tag "colors.png", alt: "colors" %>
         <p class="adventure">Discover Ghana</p>
-      </div> 
+        <p style="margin-top: 10px;">Stretching from the atlantic ocean to the savannah in the north, Ghana has incredibly diverse natural treasures like peaceful beaches by the ocean,  luscious rain forests, monkey sanctuaries, waterfalls and safari reserves. </p>
+        <p style="margin-top: 10px;"> Together with its vibrant culture and heritage, welcoming atmoshpere and rich cuisine, Ghana is the perfect destination  if you are looking for adventure, fun and untouched nature.</p>
+    </div> 
 </section>
 
 <div class="tour-discover-wrapper">
@@ -126,7 +128,8 @@
         </div>
         
         <div class="discover-info">
-            <h1 class="todo-heading">Our favourite things to do in Ghana</h1> 
+
+            <%= link_to "Our favourite things to do in Ghana", discover_path, class: "todo-heading" %>
             <%= image_tag "green_triangle", class: "todo-triangle" %>
         </div>
     </div>

@@ -1,20 +1,14 @@
-<nav class="nav-wrapper">
+<nav class="nav-wrapper" >
   <div class="nav-items">
 
     <div class="logo-burger-wrapper">
-      <div id="burger-wrapper" class="burger-wrapper" data-controller="side-nav" data-action="click->side-nav#openNav">
-        <div class="burger"></div>
-        <div class="burger"></div>
-        <div class="burger"></div>
-      </div>
       <%= link_to image_tag("sobolo.png", class: "logo", alt: "logo"), root_path %>
     </div>
 
-    <div class="nav-links">
-      <%= link_to "Home", root_path %>
-      <%= link_to "All Tours", tours_path %>
-      <%= link_to "Discover Ghana", discover_path %>
-      <%= link_to "House", stay_path %>
+    <div class="nav-links" data-controller="nav-hover" data-action="click->nav-hover#shai">
+      <%= link_to "Home", tours_path, class:"nav-link", data: {}    %>
+      <%= link_to "Discover Ghana", discover_path, class:"nav-link", data: {} %>
+      <%= link_to "Accommodation", stay_path, class:"nav-link", data: {} %>
         
       <% if user_signed_in? %>
         <%= link_to "New tour", new_tour_path %>
@@ -23,7 +17,15 @@
         <%= link_to "sign up", new_user_registration_path, class: "sign-up" %>
         <%= link_to "login", new_user_session_path, class:"login" %>
       <% end %>
+
     </div>
+
+    <div id="burger-wrapper" class="burger-wrapper" data-controller="side-nav" data-action="click->side-nav#openNav">
+      <div class="burger"></div>
+      <div class="burger"></div>
+      <div class="burger"></div>
+    </div>
+
   </div>
 </nav>
 

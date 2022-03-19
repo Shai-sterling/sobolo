@@ -1,7 +1,6 @@
 class SitesController < ApplicationController
-
     before_action :authenticate_user!
-    before_action :set_tour, only: %i[:create, :edit, :update, :destroy]
+    before_action :set_tour, only: %i[create edit update destroy]
 
     def create   
         @site = @tour.sites.create(site_params)

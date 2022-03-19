@@ -1,5 +1,4 @@
 class ToursController < ApplicationController
-
     before_action :authenticate_user!, except: [:index, :show]
     before_action :set_tour, only: %i[show edit destroy update]  
 
@@ -21,7 +20,6 @@ class ToursController < ApplicationController
     end
 
     def show 
-
     end
 
     def edit 
@@ -37,13 +35,9 @@ class ToursController < ApplicationController
         redirect_to root_path, notice: "Tour deleted successfully"
     end
 
-
-
-
     private
 
     def set_tour 
-
         @tour = Tour.find(params[:id])
     end
   

@@ -22,9 +22,12 @@
             <% end%>
         </div>
         
+
+
+
         <div class="show-tour-details">
             <div class="show-tour-detail">
-                <%= number_to_currency( @tour.price, unit: "€" )  %>
+                <%= number_to_currency(@tour.price, unit: "€" )  %>
             </div>
     
             <div class="show-tour-detail">
@@ -33,17 +36,17 @@
             
             <div class="show-tour-detail">
                 <%= image_tag("soup") %>
-                <%= @tour.meals? ? "Meals" : "No meals available" %>
+                <%= @tour.meals? ? "Meals" : "" %>
             </div>
             
             <div class="show-tour-detail">
                 <%= image_tag("ticket") %>
-                <%= @tour.entry_tickets? ? "Tickets" : "No Tickets"  %>
+                <%= @tour.entry_tickets? ? "Tickets" : ""  %>
             </div>
             
             <div class="show-tour-detail">
                 <%= image_tag("bed") %>
-                <%= @tour.accommodation? ? "Accommodation" : "No accommodation " %>      
+                <%= @tour.accommodation? ? "Accommodation" : " " %>      
             </div>
             
             <div class="show-tour-detail">
@@ -58,12 +61,18 @@
         </div>   
     </div>    
 
-    <%= render "sites" %>
+
+    
+    <%#= render "sites" %>
+
+
+        <%#= render "tours/site_form" %>
+
 
 </div>
 
 
-<section style="width: 100%; background: white">
+<section style="width: 100%; background: white; margin-top: 50px">
     <div id="find-tours" class="find-tour">
         <%= image_tag "colors.png", alt: "colors" %>
         <p class="adventure"> The <%= @tour.name %> itinerary </p> 
@@ -73,3 +82,9 @@
 
 
 <%= render "itinerary" %>
+
+
+
+
+
+
