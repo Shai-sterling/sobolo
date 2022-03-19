@@ -18,7 +18,7 @@ export default class extends Controller {
         
         bugerWrapper.style.display = "none"
 
-        sidenav.style.width = "500px"
+        sidenav.style.width = "100%"
         sidenav.style.display = "block"
         sidenav.style.boxShadow = "0px 10px 5px 0px rgb(216, 216, 216)"
         sidenav.style.transition = "1.3s"
