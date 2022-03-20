@@ -311,21 +311,23 @@ body {
         color: white;
         position: absolute;
         top: 200px ;
-       //background-color: #ED6749;
-        width: 80%; 
-        padding: 20px 0px;    
+        padding: 20px 0px;   
+
     }
     
     .discover-text {
         font-family: 'Montserrat', sans-serif;
-        font-size: 4em;
-        font-weight: 500;
+        font-size: 3.5em;
+        font-weight: 700;
+        letter-spacing: 1px;
+        background-color: hsla(0, 0%, 7%, 0.176)
 
     }
        #discover-ghana-btn {
-           background: rgba(236, 236, 236, 0.096);
-           border: 1px solid rgba(255, 255, 255, 0.562);
+           background: #75C093;
            margin-left: 30px;
+
+
 
            a {
                color: white;
@@ -342,9 +344,8 @@ body {
         margin-left: 10px;
         border-radius: 5px;
         width: 200px;
-        font-size: 1.2em;
+        font-size: 1em;
         background: #ED6749;
-        letter-spacing: 2px;
 
         a {
             color: white;
@@ -357,7 +358,6 @@ body {
 @media(max-width: 1100px) {  
     .discover-text {
         font-size: 3em !important;
-        background-color: burlywood;
         top: 170px !important;
     }
 }
@@ -365,7 +365,6 @@ body {
 @media(max-width: 934px) { 
     .discover-text {
         font-size: 2.5em !important;
-        background-color: rgb(152, 222, 135);
         margin-bottom: 10px;
     }
 
@@ -487,16 +486,22 @@ body {
     }
 
     #tour-name {  
+        font-family: 'Arpona', sans-serif;
+        //background-color: #497ded;
         color: #000;
-        padding: 5px 20px;
-        letter-spacing: 2px;
-        font-size: 2em;
-        font-weight: 500;
-        width: 100%;
+        padding: 5px 10px;
+        font-size: 38px;
+        font-weight: 800;
     }
+
+    .index-sites {
+        padding: 5px 15px;
+        word-spacing: 2px;
+    }
+
     
     .tour-card-details {
-        padding: 30px 20px 0px 20px ;
+        padding: 5px 10px ;
         //padding: 10px;
         line-height: 28px;    
     }
@@ -594,7 +599,6 @@ body {
     min-width: 350px;
     display: flex;
     flex-wrap: wrap;
-  
 
     img {
         width: 46%;
@@ -676,6 +680,7 @@ body {
     min-width: 400px;
     overflow-y: scroll;
     line-height: 24px;   
+    padding: 20px 0px;
 }
 
 
@@ -683,6 +688,10 @@ body {
     font-size: 2em;
     color: #ED6749;
     margin-bottom: 20px;
+    font-family: "Montserrat";
+    font-weight: 600 ;
+    margin-top: 10px;
+
 }
 
 .description-text {
@@ -785,8 +794,9 @@ body {
         font-size: 18px;
     }
 }
+
 .show-site {
-   // background-color: seagreen;
+    background-color: seagreen;
     margin-right: 15px;
     font-size: 20px;
 }
@@ -801,39 +811,36 @@ body {
 
 
 .tour-map-wrapper {
-    width: 50%;
-   // background-color: rgb(197, 211, 6);
-    min-width: 200px;
+  // background-color: rgb(219, 137, 14);
+  width: 50%;
+    min-width: 300px;
 
     .tour-map {
-        width: 100%;
-        object-fit: cover
-        
+        width: 100%; 
+   
     }
 }
 
 .itinerary {
-    padding: 50px 0px;
-   // background: #cf6d6d;
-    display: flex;
+    padding: 150px 0px;
+   //background: #a2cc09;
 }
 
 
 .itinerary-wrapper {
-    background: #ffffff;
+  //  background: #ffffff;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 80%;
     margin: auto;
-    padding: 100px;
 }
 
 .itinerary-details {
-   //background: #f15f5f;
-    width: 50%;
-    min-width: 250px;
-    padding-left: 30px;
+  // background: #f15f5f;
+   width: 45%;
+   min-width: 300px;
+   padding: 30px;
 }
 
 .itinerary-text {
@@ -929,26 +936,28 @@ footer {
 }
 
 
-/////discover/ Ghana//
+/////discover Ghana//
 
 
 
 .shai {
     padding: 100px 0px;
+    background: #fafafa;
 }
 
 .things-todo-wrapper {
     width: 80%;
     margin: auto;
-    background-color: #fafafa;
-   
+    background-color: #ffffff;
+    overflow-y: scroll;
+
 }
 
 .todo-pic {
     height: 400px;
     width: 50%;
     //min-width: 400px;
-    background-color: steelblue;
+   // background-color: steelblue;
 }
 
 #first-todo-pic, #third-todo-pic {
@@ -964,12 +973,16 @@ footer {
 
 
 .todo-info-wrapper {
-    background: rgb(255, 255, 255);
+   // background: rgb(221, 82, 82);
     height: 400px;
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .todo-heading {
+        margin-bottom: 20px;
+    }
 }
 
 @media(max-width: 998px) {
@@ -986,7 +999,7 @@ footer {
 
 .todo-info-text {
     //background-color: yellow;
-    padding: 20px;
+    padding: 50px;
 }
 
 .todo-image {
