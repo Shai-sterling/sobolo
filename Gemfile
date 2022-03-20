@@ -29,9 +29,19 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 # gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 # Support for uploading images with active storage
 gem 'mini_magick', '~> 4.11'
+
+gem 'figaro', '~> 1.1', '>= 1.1.1'
+
+
+
+gem 'capistrano', '~> 3.17'
+gem 'capistrano-rails', '~> 1.6', '>= 1.6.2'
+gem 'capistrano-passenger', '~> 0.2.1'
+gem 'capistrano-rbenv', '~> 2.2'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
-
+gem 'rename', '~> 1.0', '>= 1.0.8'
 group :development, :test do
   # Use for testing specs
   gem 'rspec-rails', '~> 5.0', '>= 5.0.2'
