@@ -942,7 +942,7 @@ footer {
 
 .shai {
     padding: 100px 0px;
-    background: #fafafa;
+    //sbackground: #a11313;
 }
 
 .things-todo-wrapper {
@@ -985,6 +985,12 @@ footer {
     }
 }
 
+.todo-info-text {
+   // background-color: yellow;
+    padding: 30px;
+}
+
+
 @media(max-width: 998px) {
     
     #second-todo-pic, #fourth-todo-pic, #first-todo-pic, #third-todo-pic {
@@ -997,11 +1003,7 @@ footer {
 }
 
 
-.todo-info-text {
-    //background-color: yellow;
-    padding: 20px;
-    overflow: hidden;
-}
+
 
 .todo-image {
     width: 100%;
