@@ -81,7 +81,7 @@ test:
 #
 production:
   <<: *default
-  database: sobolo_production
+  database: sobolo
   #username: delo
   #password: <%= ENV['sobolo_DATABASE_PASSWORD'] %>
   database_url: <%= ENV["DB_URL"] %>
