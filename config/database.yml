@@ -85,3 +85,4 @@ production:
   #username: delo
   #password: <%= ENV['sobolo_DATABASE_PASSWORD'] %>
   database_url: <%= ENV["database_url"] %>
+  secret_key_base: <%= ENV["secret_key_base"] %>

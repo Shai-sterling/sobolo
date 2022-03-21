@@ -2,7 +2,7 @@
 lock "~> 3.17.0"
 
 set :application, "sobolo"
-set :repo_url, "https://github.com:Shai-sterling/sobolo.git"
+set :repo_url, "git@github.com:Shai-sterling/sobolo.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
