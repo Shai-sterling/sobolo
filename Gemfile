@@ -30,7 +30,7 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 # Support for uploading images with active storage
 gem 'mini_magick', '~> 4.11'
 
-gem 'figaro', '~> 1.1', '>= 1.1.1'
+#gem 'figaro', '~> 1.1', '>= 1.1.1'
 
 
 
