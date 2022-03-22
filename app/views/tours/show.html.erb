@@ -8,7 +8,7 @@
         <% end %>
         
         <div id="show-tour-description" class="show-tour-description">
-            <p class="tour-region"><%= @tour.name.capitalize %> Region</p>
+            <p class="tour-region"><%= @tour.name.capitalize %> Experience</p>
 
             <div class="description-text">
                 <%= @tour.description %>
@@ -23,40 +23,51 @@
         </div>
         
 
-
-
         <div class="show-tour-details">
             <div class="show-tour-detail">
-                <%= number_to_currency(@tour.price, unit: "€" )  %>
+               <p style="color: #F47559; font-weight: 500; font-size: 2.2em;"><%= number_to_currency(@tour.price, unit: "€" )  %></p>  
+               <p style="margin-left: 5px; font-size: 0.8em;">per person</p>
             </div>
     
             <div class="show-tour-detail">
-                <%= @tour.duration > 1 ? "#{@tour.duration}  days trip" : " 1 day trip" %>
+               <p>
+                   <%= @tour.duration > 1 ? "#{@tour.duration}  days trip" : " 1 day trip" %>
+               </p>
             </div>
             
             <div class="show-tour-detail">
-                <%= image_tag("soup") %>
-                <%= @tour.meals? ? "Meals" : "" %>
+                <% if  @tour.meals? %>
+                    <%= image_tag("soup") %>
+                    <p>Meal</p>   
+               <% end %>
             </div>
             
             <div class="show-tour-detail">
-                <%= image_tag("ticket") %>
-                <%= @tour.entry_tickets? ? "Tickets" : ""  %>
+                <% if  @tour.entry_tickets? %>
+                    <%= image_tag("ticket") %>
+                    <p>Tickets</p>   
+               <% end %>
             </div>
             
             <div class="show-tour-detail">
-                <%= image_tag("bed") %>
-                <%= @tour.accommodation? ? "Accommodation" : " " %>      
+                <% if  @tour.accommodation? %>
+                    <%= image_tag("bed") %>
+                    <p>Accommodation</p>   
+                <% end %>
             </div>
             
             <div class="show-tour-detail">
-                <%= image_tag("pickup") %>
-                <%= @tour.pick_up? ? "Pickup" : "No pickup available"%>
+                <% if  @tour.pick_up? %>
+                    <%= image_tag("pickup") %>
+                    <p>Pickup</p>   
+                <% end %>
             </div>
             
             <div class="show-tour-detail">
-                <%= image_tag("bus") %>
-                <%= @tour.transport? ? "Transport" : "No transport " %> 
+                <% if  @tour.transport? %>
+                    <%= image_tag("bus") %>
+                    <p>Transport</p>   
+                <% end %>
             </div>  
         </div>   
     </div>    
@@ -72,13 +83,12 @@
 </div>
 
 
-<section style="width: 100%; background: white; margin-top: 50px">
+<section style="width: 100%; background: white; margin-top: 30px">
     <div id="find-tours" class="find-tour">
         <%= image_tag "colors.png", alt: "colors" %>
         <p class="adventure"> The <%= @tour.name %> itinerary </p> 
     </div> 
 </section>
-
 
 
 <%= render "itinerary" %>

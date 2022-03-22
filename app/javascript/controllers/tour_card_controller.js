@@ -3,17 +3,8 @@ import { Controller } from "stimulus"
 export default class extends Controller {
   static targets = [  "card" ]
 
-  connect() {
-    //console.log("Hello, Stimulus!", this.element)
-    console.log("tour card");
-  }
-
     mouse(event) {
-        
-        console.log("mouse entered tour card container");
-
         for (let i = 0; i < this.cardTargets.length; i++) {
-
             const element = this.cardTargets[i];
 
             element.addEventListener("mouseenter", function(){ 
@@ -29,11 +20,6 @@ export default class extends Controller {
                 this.style.transform = ""
 
             })
-
         }
-
     }
-
-
- 
 }

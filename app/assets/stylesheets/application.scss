@@ -28,15 +28,16 @@ html {
     height: 100vh;
     overflow: hidden;
 }
+
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #fafafa;  
+    background-color: #ffffff;  
     display: flex;
 }
 
 .ster {
     width: 100%;
-    background: rgb(238, 238, 238);
+    background: #fafafa;
 }
 
 // Side Nav Bar
@@ -49,14 +50,12 @@ body {
     position: fixed;
     transition: 2s;
     z-index: 15;
-    height: 100%;
-    
+    height: 100%;  
 }
 
 .close {
     font-size: 3em;
     color: rgb(255, 255, 255);
-    //background-color: azure;
     width: 50px;
     text-align: center;
     margin-left: auto;  
@@ -68,17 +67,12 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-items: baseline;    
-    //background-color: blue;
     display: none;  
 
 }
 
-
 .side-link {
-
-    //background-color: yellow;
     margin: 20px;
-
 
     a {
         width: 100%;
@@ -89,9 +83,7 @@ body {
       }
 }
 
-
 .burger-wrapper {
-   // background: #ffdad2;
    display: none;
     margin-right: 15px;
     cursor: pointer;
@@ -103,10 +95,7 @@ body {
     height: 2px;
     width: 30px;
     background-color: black;
-
 }
-
-
 
 @media(min-width: 908px) {
     .burger-wrapper {
@@ -118,12 +107,10 @@ body {
 .logo-burger-wrapper {
     display: flex;
     align-items: center;
-   // background: red;
 }
 
-
-
 //Navigation//
+
 .nav-wrapper {
     background: #ffffff;
     position: fixed;
@@ -138,7 +125,6 @@ body {
 .nav-items {
     width: 80%;
     margin: auto;
-   // background-color: hsl(192, 91%, 50%);
     display: flex;
     justify-content: space-between;
     padding: 20px 0px;
@@ -146,15 +132,11 @@ body {
 }
 
 .nav-links {
-   //background: rgb(255, 187, 0);
     width: 90%;
     height: 70px;
     display: flex;
     align-items: center;
     justify-content: end;
-
-
-
 
     .nav-link:hover {
 
@@ -170,7 +152,6 @@ body {
         text-decoration: none;
         font-size: 16px;
         font-weight: 500;
-       // background-color: rgb(214, 51, 51);
         color: black;
         margin: 10px;
     }
@@ -203,10 +184,6 @@ body {
      }
 }
 
-
-
-
-
  //-----------Tour  new form ----------//
 
 .tour {
@@ -233,7 +210,6 @@ body {
 
     .tour-name {
         width: 60%;
-       // background: blue;
     }
 
     .tour-price, 
@@ -244,7 +220,6 @@ body {
     .tour-pickup,
     .tour-transport {
         width: 300px;
-        //background: rgb(9, 255, 0);
         overflow-x: hidden;
         
         select {
@@ -256,7 +231,6 @@ body {
 
     .tour-description {
         margin-top:30px ;
-        //background: lightcoral;
         width: 100%;
 
         textarea {
@@ -269,7 +243,6 @@ body {
 
     .tour-submit {
         width: 100%;
-        //background-color: khaki;
         padding: 5px;
         .tour-btn {
             padding: 10px;
@@ -296,9 +269,6 @@ body {
     align-items: flex-start;
     text-align: center;
     margin-top: 90px;
-
-
-
 
     .hero-background {
         top: 0;
@@ -332,7 +302,6 @@ body {
            }
        }
   
-
     .hero-text-btn {
         padding: 10px;
         margin-top: 30px;
@@ -385,9 +354,7 @@ body {
 
 }
 
-
 .index-sites{
-    //background-color: salmon;
     display: flex;
     padding: 0 20px;
     font-size: 1.1em;
@@ -401,7 +368,7 @@ body {
     justify-content: space-between;
     align-content: center;
     margin: auto;
-    padding: 30px 0px;
+    padding: 40px 0px;
 
     .sustainable-icons {
         text-align: center;
@@ -416,13 +383,11 @@ body {
             margin-top: 10px;
         }
     }
-
 }
 
 //  Find tours on Index //
 
 .find-tour, .find-team{
-    //background-color: rgb(66, 142, 241);
     width: 80%;
     color: rgb(10, 10, 10);
     text-align: center;
@@ -447,12 +412,10 @@ body {
     }  
 }
 
-
 // Tour container and Cards //
 
 .tour-container {
     width: 80%;
-    //background: #e95d5d;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -484,7 +447,6 @@ body {
 
     #tour-name {  
         font-family: 'Arpona', sans-serif;
-        //background-color: #497ded;
         color: #000;
         padding: 5px 10px;
         font-size: 38px;
@@ -495,22 +457,18 @@ body {
         padding: 5px 15px;
         word-spacing: 2px;
     }
-
     
     .tour-card-details {
         padding: 5px 10px ;
-        //padding: 10px;
         line-height: 28px;    
     }
 
     .tour-card-item {
-        //background: lightcoral;
         color: rgb(36, 36, 36);
         width: 100%;
     }
 
     #tour-price {
-      // background: #ED6749;
         color: #ED6749;   
         text-align: right;
         padding-right: 20px;
@@ -520,7 +478,6 @@ body {
     }   
 
     #read-more {
-       // background: hotpink;
         padding: 10px 20px 5px 20px;
     }
   
@@ -540,10 +497,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-  //  background-color: #bebcbc;
     padding: 80px 0px;
-    //border: 1px solid red;
-
 }
 
 .team {
@@ -568,9 +522,7 @@ body {
         text-align: left;
         font-family:"Montserrat";
         margin-top: 10px;
-
     }
-
 }
 
 .tour-discover-wrapper {
@@ -582,7 +534,6 @@ body {
 .tour-discover {
     background-color: #ffffff;
     width: 80%;
-  //  padding: 50px 0px;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
@@ -591,7 +542,6 @@ body {
  
 
 .discover-image {
-   //background-color: chartreuse;
     width: 50%;
     min-width: 350px;
     display: flex;
@@ -610,10 +560,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
- 
     width: 46%;
     min-width: 340px;
-
 
     .todo-heading{
         text-decoration: none;
@@ -629,7 +577,7 @@ body {
     background-color: rgb(255, 255, 255);
     padding: 50px  0px;
     position: relative;
-    top: 111px;
+    top: 90px;
 }
 
 .tour-show {
@@ -637,14 +585,13 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    //background-color: rgb(124, 9, 9);
     margin: auto;
 }
 
 .tour-pic { 
     width: 50%;   
     min-width: 400px;
-   // background-color: yellow;
+
     img {
         width: 100%;
         object-fit: cover;
@@ -653,23 +600,19 @@ body {
     }
 }
 
-@media(max-width: 999px) {
-    
+@media(max-width: 999px) {  
     .show-tour-description {
         margin-top: 30px;
         width: 100% !important;
-       // background: rgb(0, 255, 76);
     }
 
     .tour-pic { 
-        //background-color: rgb(45, 149, 209);
         width: 100%;
         img {
             width: 100%;
             object-fit: cover;
         }
     }
-
 }
 
 #show-tour-description {
@@ -677,48 +620,40 @@ body {
     min-width: 400px;
     overflow-y: scroll;
     line-height: 24px;   
-    padding: 20px 0px;
+    padding-top: 20px;
 }
-
 
 .tour-region {
     font-size: 2em;
-    color: #ED6749;
+    color: #75C093;
     margin-bottom: 20px;
     font-family: "Montserrat";
-    font-weight: 600 ;
+    font-weight: 500 ;
     margin-top: 10px;
-
 }
 
 .description-text {
     overflow-y: scroll;
-    //background: cadetblue;
-
 }
 
 .tour-show-btn-wrapper {
-   // background: rgb(189, 10, 114);
     padding: 10px 0px;
 }
 
 .show-tour-details {
-    //background: rgb(235, 235, 235);
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 10px;
+    padding: 5px;
+    
 }
 
 .show-tour-detail {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-   // background: rgb(255, 255, 255);
+    font-weight: 500;
     margin: 10px;
-    padding: 5px;
 
     img {
         height: 30px;
@@ -728,37 +663,28 @@ body {
 
 @media(max-width: 999px) {
     .show-tour-details {
-        width: 250px;
+        width: 300px;
         margin: 0px !important;
         margin-top: 30px !important;    
     }  
 }
-
 
 .edit-btn {
     padding: 10px;
     background: hotpink;
     text-decoration: none;
     color: white;
-
 }
 
 .delete-btn {
-
     padding: 10px;
     background: red;
     text-decoration: none;
     color: white;
 }
 
-
-
-
-
 .sites-wrapper {
-
     width: 80%;
-    //background-color: red;
     margin: auto;
     margin-top: 30px;
     display: flex;
@@ -771,7 +697,6 @@ body {
     padding: 20px;
     margin-bottom: 30px;
 
-
     input[type="text"] {
         padding: 5px;
         width: 100%;
@@ -782,8 +707,6 @@ body {
         height: 100px;
         width: 100%;
         margin: 10px 0px;
-
-
     }
 
     .add-site-btn {
@@ -798,18 +721,13 @@ body {
     font-size: 20px;
 }
 .site-form-wrapper {
-    //background-color: rgb(22, 150, 255);
     width: 80%;
     margin: auto;
     margin-top: 20px;
 }
 
-
-
-
 .tour-map-wrapper {
-  // background-color: rgb(219, 137, 14);
-  width: 50%;
+    width: 50%;
     min-width: 300px;
 
     .tour-map {
@@ -820,12 +738,9 @@ body {
 
 .itinerary {
     padding: 150px 0px;
-   //background: #a2cc09;
 }
 
-
 .itinerary-wrapper {
-  //  background: #ffffff;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -834,7 +749,6 @@ body {
 }
 
 .itinerary-details {
-  // background: #f15f5f;
    width: 45%;
    min-width: 300px;
    padding: 30px;
@@ -843,7 +757,6 @@ body {
 .itinerary-text {
     display: flex;
     flex-wrap: wrap;
-   // background: hsl(303, 84%, 35%);
     width: 100%;
     margin-bottom: 20px;
 
@@ -856,9 +769,7 @@ body {
     p {
         margin-top: 5px;
 
-    }
-
-   
+    } 
 }
 
 .itinerary-number {
@@ -870,61 +781,41 @@ body {
     object-fit: cover;
 }
 
-// .footer-contacts {
-//     background-color: red;
-// }
-
 footer {
     background-color: #381A31;
     color: white;
     padding-top: 150px;
     padding-bottom: 50PX;
-    //margin-top: 140px  
 }
 
-// .footer-pic  {
-//     background-color: #fafafa;
-// }
 .footer-logo {
-    //background-color: #F2C854;
     width: 200px;
 }
 
 .socail-wrapper {
-  // background: rgb(31, 219, 24);
-   width: 80%;
-     margin: auto;
-     padding-bottom: 20px;
-     display: flex;
-     flex-wrap: wrap;
-     align-items: center;
-     justify-content: space-between;
-     
-     // .footer-contacts {
-     //     //background-color: red;
-     // }
-   
+    width: 80%;
+    margin: auto;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
  }
-.contactus {
-    //background-color: aqua;
-    //font-size: 1.7em;
+
+.contactus { 
     line-height: 26px;
     font-size: 24px;
     margin-bottom: 30px;
 }
 
 .footer-icons {
-    //font-size: 2em;
-    // letter-spacing: 1px;
-    //background-color: cornflowerblue;
     display: flex;
     align-items: center;
     margin-top: 10px;
 
     p {
         margin-left: 10px;
-    }
-    
+    }  
 }
 
 .footer-social {
@@ -932,13 +823,9 @@ footer {
     color: white;
 }
 
-
-
 @media(max-width: 593px) {
     #footer-pic {
         margin-top: 30px;
-
-
         img {
 
             width: 150px !important;
@@ -947,14 +834,10 @@ footer {
    
 }
 
-
 /////discover Ghana//
-
-
 
 .shai {
     padding: 100px 0px;
-    //sbackground: #a11313;
 }
 
 .things-todo-wrapper {
@@ -962,14 +845,11 @@ footer {
     margin: auto;
     background-color: #ffffff;
     overflow-y: scroll;
-
 }
 
 .todo-pic {
     height: 400px;
     width: 50%;
-    //min-width: 400px;
-   // background-color: steelblue;
 }
 
 #first-todo-pic, #third-todo-pic {
@@ -983,9 +863,7 @@ footer {
     float: left;
 }
 
-
 .todo-info-wrapper {
-   // background: rgb(221, 82, 82);
     height: 400px;
     width: 50%;
     display: flex;
@@ -998,13 +876,10 @@ footer {
 }
 
 .todo-info-text {
-   // background-color: yellow;
     padding: 30px;
 }
 
-
-@media(max-width: 998px) {
-    
+@media(max-width: 998px) { 
     #second-todo-pic, #fourth-todo-pic, #first-todo-pic, #third-todo-pic {
         float: left;
         width: 100%;
@@ -1018,12 +893,9 @@ footer {
     }
 
     .todo-info-text {
-        // background-color: yellow;
          padding: 10px;
      }
 }
-
-
 
 
 .todo-image {
@@ -1036,7 +908,6 @@ footer {
 .todo-triangle {  
     height: 200px;
 }
-
 
 .todo-heading {
     font-weight: 400;
@@ -1063,19 +934,14 @@ footer {
         font-size: 14px;
         margin: 20px 0px;
         padding: 10px;
-
     }
-
 }
 
 .field {
-   // background: #F2C854;
     input {
         width: 100%;
         margin: 20px 0px;
         font-size: 1em;
-
-
     }
 
     input[type=checkbox] {
@@ -1084,16 +950,12 @@ footer {
     input[type=email], input[type=password] {
         
         height: 40px;
-    }
-   
+    }  
 }
-
-
 
 // Houses for tourist to stay in 
 
 .house-wrapper {
-   // background: #ec5c5c;
     display: flex;
     align-items: center;
     margin-top: 100px;
@@ -1102,16 +964,11 @@ footer {
 
 }
 
-
-
 .stay-wrapper{
     width: 80%;
-    //background: #4cb91a;
     margin: auto;
 
 }
-
-
 
 .volta-house {
     width: 50%;
@@ -1119,8 +976,8 @@ footer {
     height: 350px;
     object-fit: cover;
     float: left;
-
 }
+
 .volta-house-info {
     background: rgb(255, 255, 255);
     height: 350px;
@@ -1128,9 +985,7 @@ footer {
     float: right;
     display: flex;
     align-items: center;
-    padding: 20px;
-
-    
+    padding: 20px;  
 }
 
 .oasis-house {
@@ -1139,11 +994,9 @@ footer {
     height: 350px;
     object-fit: cover;
     float: left;
-
 }
 
 .oasis-house-info {
-   // background: rgb(6, 189, 113);
    height: 350px;
    width: 50%;
     float: left;
@@ -1151,10 +1004,7 @@ footer {
     align-items: center;
     padding: 20px;
     background: rgb(255, 255, 255);
-
 }
-
-
 
 .kokrobite-house {
     width: 50%;
@@ -1165,7 +1015,6 @@ footer {
 }
 
 .kokrobite-house-info {
-  //  background: rgb(149, 189, 6);
     height: 350px;
     width: 50%;
     float: left;
@@ -1173,9 +1022,7 @@ footer {
     align-items: center;
     padding: 20px;
     background: rgb(255, 255, 255);
-
 }
-
 
 @media(max-width: 750px) {
     .stay-wrapper{       
