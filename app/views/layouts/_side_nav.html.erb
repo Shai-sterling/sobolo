@@ -1,33 +1,41 @@
 <div id="side-nav" class="side-nav-wrapper">
 
-    <div  id="close" class="close" data-controller="side-nav" data-action="click->side-nav#closeNav">
-    </div>
-
-    <div id="side-links" class="side-links">
-
-      <div class="side-link">
-        <%= link_to "Home", root_path %>
-      </div>
-
-      <div class="side-link">
-        <%= link_to "Tours", tours_path %>
-      </div>
-
-      <div class="side-link">
-        <%= link_to "Discover Ghana", discover_path %>
-      </div>
-      <div class="side-link">
-        <%= link_to "Accommodation", stay_path %>
-      </div>
-
-      <div class="side-link">
-        <%= link_to "signup", new_user_registration_path %>
-      </div>
-
-      <div class="side-link">
-        <%= link_to "login", new_user_session_path %>
-      </div>
-
-    </div>
-
+  <div  id="close" class="close" data-controller="side-nav" data-action="click->side-nav#closeNav">
   </div>
+
+  <div id="side-links" class="side-links">
+
+    <div class="side-link">
+      <%= link_to "Home", root_path %>
+    </div>
+
+    <div class="side-link">
+      <%= link_to "Tours", tours_path %>
+    </div>
+
+    <div class="side-link">
+      <%= link_to "Discover Ghana", discover_path %>
+    </div>
+
+    <div class="side-link">
+      <%= link_to "Accommodation", stay_path %>
+    </div>
+
+    <div class="side-link">
+        <% if user_signed_in? %>
+          <%= link_to "sign out", destroy_user_session_path, method: :delete, class:"sign-out" %>
+        <% else %>
+          <%= link_to "sign up", new_user_registration_path %>
+         <p style="margin-top: 20px;"><%= link_to "login", new_user_session_path %></p>
+        <% end %>
+    </div>
+    
+    <div class="side-link">
+      <% if user_signed_in? && current_user.admin? %> 
+       <%= link_to "new tour", new_tour_path %>      
+      <% end %>
+    </div>
+      
+  </div>
+
+</div>

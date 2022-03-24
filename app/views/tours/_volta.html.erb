@@ -10,8 +10,12 @@
                     <div class="itinerary-text">
                         <h1><%= site.id %></h1>
                         <h1><%= site.name %></h1>
-                        <p style="margin-left:10px;"><%= link_to "edit", edit_tour_site_path(@tour, site) %> </p>
-                        <p style="margin-left:10px;"><%= link_to "delete", [@tour, site], method: :delete, data: { confirm: "are you sure?"} %></p> </p>
+                        
+                        <% if user_signed_in? && current_user.admin? %> 
+                            <p style="margin-left:10px;"><%= link_to "edit", edit_tour_site_path(@tour, site) %> </p>
+                            <p style="margin-left:10px;"><%= link_to "delete", [@tour, site], method: :delete, data: { confirm: "are you sure?"} %></p> </p>
+                        <% end %>
+
                         <p style="width: 100%;"><%= site.description %></p>
                     </div>
                 <% end %>

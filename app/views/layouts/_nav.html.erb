@@ -10,9 +10,12 @@
       <%= link_to "Discover Ghana", discover_path, class:"nav-link", data: {} %>
       <%= link_to "Accommodation", stay_path, class:"nav-link", data: {} %>
         
+      <% if user_signed_in? && current_user.admin? %> 
+       <%= link_to "new tour", new_tour_path %>      
+      <% end %>
+
       <% if user_signed_in? %>
-        <%= link_to "New tour", new_tour_path %>
-        <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"sign-out" %>
+        <%= link_to "sign out", destroy_user_session_path, method: :delete, class:"sign-out" %>
       <% else %>
         <%= link_to "sign up", new_user_registration_path, class: "sign-up" %>
         <%= link_to "login", new_user_session_path, class:"login" %>

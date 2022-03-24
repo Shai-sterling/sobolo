@@ -73,7 +73,6 @@
 
 </div>
 
-
 <section style="width: 100%; background: white; margin-top: 30px">
     <div id="find-tours" class="find-tour">
         <%= image_tag "colors.png", alt: "colors" %>
@@ -84,6 +83,6 @@
 <%= render "volta" %>
 <%= render "accra" %>
         
-<% if user_signed_in? && @tour.user_id == current_user.id %> 
+<% if user_signed_in? && current_user.admin? %> 
     <%= render "tours/site_form" %>
 <% end%>

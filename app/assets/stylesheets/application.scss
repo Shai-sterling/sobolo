@@ -58,10 +58,8 @@ body {
 }
 
 .close {
-    //font-size: 3em;
     color: rgb(255, 255, 255);
     width: 30px;
-    
     height: 30px;
     background-color: #ffffff;
     border-radius: 5px;
@@ -91,7 +89,6 @@ body {
     flex-wrap: wrap;
     justify-items: baseline;    
     display: none;  
-
 }
 
 .side-link {
@@ -103,14 +100,13 @@ body {
         font-weight: 500;
         text-decoration: none;
         color: rgb(255, 255, 255);
-      }
+    }
 }
 
 .burger-wrapper {
-   display: none;
+    display: none;
     margin-right: 15px;
-    cursor: pointer;
-    
+    cursor: pointer;  
 }
 
 .burger {
@@ -122,9 +118,8 @@ body {
 
 @media(min-width: 908px) {
     .burger-wrapper {
-        display: none !important;
-         
-     }
+        display: none !important;     
+    }
 }
 
 .logo-burger-wrapper {
@@ -142,7 +137,6 @@ body {
     width: 100%;
     border-bottom: 1px rgb(252, 252, 252) solid;
     box-shadow: 0px 0px 5px 0px rgb(209, 209, 209);
-
 }
 
 .nav-items {
@@ -150,8 +144,7 @@ body {
     margin: auto;
     display: flex;
     justify-content: space-between;
-    padding: 20px 0px;
-   
+    padding: 20px 0px; 
 }
 
 .nav-links {
@@ -162,15 +155,10 @@ body {
     justify-content: end;
 
     .nav-link:hover {
-
         border-bottom: #ED6749 5px solid;
         padding: 5px 0px;
     }
-    .nav-link::after{
-
-        border-bottom: #497ded 5px solid;
-    }
-
+    
     a {
         text-decoration: none;
         font-size: 16px;
