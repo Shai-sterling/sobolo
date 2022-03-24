@@ -1,12 +1,9 @@
 <div class="sites-wrapper">
     <% @tour.sites.each do |site| %>
-
         <div class="show-site">
             <%= site.name %>
-
-            <%#= link_to "edit", edit_tour_site_path(@tour, site) %> 
-            <%#= link_to "delete", [@tour, site], method: :delete, data: { confirm: "are you sure?"} %></p> 
+            <%= link_to "edit", edit_tour_site_path(@tour, site) %> 
+            <%= link_to "delete", [@tour, site], method: :delete, data: { confirm: "are you sure?"} %></p> 
         </div>
-
     <% end %>
 </div>

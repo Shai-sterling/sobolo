@@ -22,7 +22,6 @@
             <% end%>
         </div>
         
-
         <div class="show-tour-details">
             <div class="show-tour-detail">
                <p style="color: #F47559; font-weight: 500; font-size: 2.2em;"><%= number_to_currency(@tour.price, unit: "€" )  %></p>  
@@ -72,14 +71,6 @@
         </div>   
     </div>    
 
-
-    
-    <%#= render "sites" %>
-
-
-        <%#= render "tours/site_form" %>
-
-
 </div>
 
 
@@ -90,11 +81,9 @@
     </div> 
 </section>
 
-
-<%= render "itinerary" %>
-
-
-
-
-
-
+<%= render "volta" %>
+<%= render "accra" %>
+        
+<% if user_signed_in? && @tour.user_id == current_user.id %> 
+    <%= render "tours/site_form" %>
+<% end%>

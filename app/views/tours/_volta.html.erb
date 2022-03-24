@@ -1,0 +1,21 @@
+<div class="itinerary">
+    <% if @tour.name == "volta" %>
+        <div class="itinerary-wrapper">
+            <div class="tour-map-wrapper">
+                <%= image_tag "voltamap", class: "tour-map" %>
+            </div>
+    
+            <div class="itinerary-details">
+                <% @tour.sites.each do |site| %>
+                    <div class="itinerary-text">
+                        <h1><%= site.id %></h1>
+                        <h1><%= site.name %></h1>
+                        <p style="margin-left:10px;"><%= link_to "edit", edit_tour_site_path(@tour, site) %> </p>
+                        <p style="margin-left:10px;"><%= link_to "delete", [@tour, site], method: :delete, data: { confirm: "are you sure?"} %></p> </p>
+                        <p style="width: 100%;"><%= site.description %></p>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    <% end %>
+</div>    

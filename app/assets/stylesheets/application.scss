@@ -14,6 +14,10 @@
  *= require_self
  */
 
+
+ 
+ 
+
 * { 
     margin:0;
     padding: 0;
@@ -54,11 +58,30 @@ body {
 }
 
 .close {
-    font-size: 3em;
+    //font-size: 3em;
     color: rgb(255, 255, 255);
-    width: 50px;
+    width: 30px;
+    
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    position: relative;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.close:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "\00D7"; 
+    color: rgb(0, 0, 0);
     text-align: center;
-    margin-left: auto;  
+    font-size: 1.5em;
 }
 
 // side nav links
@@ -259,7 +282,7 @@ body {
  //------------Tour Index ---------------//
 
 .hero-container {
-    background: url("rock.png");
+    background: url("rock.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover ;
@@ -432,6 +455,7 @@ body {
     //overflow: hidden;
     border-radius: 5px;
     box-shadow: 1px 2px 13px 2px rgba(0, 0, 0, 0.15);
+    margin: 10px 0px;
 
     img {
         width: 100%;
@@ -564,7 +588,6 @@ body {
     min-width: 340px;
 
     .todo-heading{
-        text-decoration: none;
         color: black;
         font-size: 2em;
         width: 350px;
@@ -736,9 +759,6 @@ body {
     }
 }
 
-.itinerary {
-    padding: 150px 0px;
-}
 
 .itinerary-wrapper {
     display: flex;
@@ -746,22 +766,24 @@ body {
     justify-content: space-between;
     width: 80%;
     margin: auto;
+   // background: darkgoldenrod;
+    padding: 100px;
 }
 
 .itinerary-details {
    width: 45%;
    min-width: 300px;
-   padding: 30px;
+   padding: 30px 0px;
 }
 
 .itinerary-text {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    margin-bottom: 20px;
+    margin-top: 20px;
 
     h1 {
-        font-weight: 500;        
+        font-weight: 400;        
         font-size: 25px;
         margin-right: 15px;
     }
@@ -848,7 +870,7 @@ footer {
 }
 
 .todo-pic {
-    height: 400px;
+    height: 500px;
     width: 50%;
 }
 
@@ -864,7 +886,7 @@ footer {
 }
 
 .todo-info-wrapper {
-    height: 400px;
+    height: 500px;
     width: 50%;
     display: flex;
     align-items: center;
@@ -973,14 +995,14 @@ footer {
 .volta-house {
     width: 50%;
     min-width: 300px;
-    height: 350px;
+    height: 500px;
     object-fit: cover;
     float: left;
 }
 
 .volta-house-info {
     background: rgb(255, 255, 255);
-    height: 350px;
+    height: 500px;
     width: 50%;
     float: right;
     display: flex;
@@ -991,13 +1013,13 @@ footer {
 .oasis-house {
     width: 50%;
     min-width: 300px;
-    height: 350px;
+    height: 500px;
     object-fit: cover;
     float: left;
 }
 
 .oasis-house-info {
-   height: 350px;
+   height: 500px;
    width: 50%;
     float: left;
     display: flex;
@@ -1009,13 +1031,13 @@ footer {
 .kokrobite-house {
     width: 50%;
     min-width: 300px;
-    height: 350px;
+    height: 500px;
     object-fit: cover;
     float: right;
 }
 
 .kokrobite-house-info {
-    height: 350px;
+    height: 500px;
     width: 50%;
     float: left;
     display: flex;
@@ -1025,10 +1047,7 @@ footer {
 }
 
 @media(max-width: 750px) {
-    .stay-wrapper{       
-        height: 230vh;
-    }
-
+ 
     .volta-house {
         width: 100%;
     }
