@@ -298,10 +298,11 @@ body {
     
     .discover-text {
         font-family: 'Montserrat', sans-serif;
-        font-size: 3.5em;
-        font-weight: 700;
+        font-size: 4.5em;
+        font-weight: 500;
         letter-spacing: 1px;
 
+        line-height: 80px;
     }
        #discover-ghana-btn {
            background: #75C093;
@@ -336,19 +337,29 @@ body {
     .discover-text {
         font-size: 3em !important;
         top: 170px !important;
+        line-height: 50px !important;
+
     }
 }
 
 @media(max-width: 934px) { 
+
+    .hero-container, .hero-background {
+        height: 50vh !important;
+    }
+
+  
     .discover-text {
         font-size: 2.5em !important;
-        margin-bottom: 10px;
     }
 
     .hero-text-btn {
-        padding: 10px !important;
-        margin: 15px !important;
-
+        padding: 4px !important;
+        margin: 10px !important;
+        width: 100px !important;
+        font-size: .8em !important;
+        margin-left: 5px !important;
+    
     } 
 
     .tour-card {
@@ -442,18 +453,15 @@ body {
     padding-bottom: 10px;
     //overflow: hidden;
     border-radius: 5px;
-    box-shadow: 1px 2px 13px 2px rgba(0, 0, 0, 0.15);
     margin: 20px 0px;
+    box-shadow: 3px 7px 10px #8888888a;
 
     img {
         width: 100%;
         height: 300px;   
-        image-rendering: auto;
-        image-rendering: crisp-edges;
-        image-rendering: pixelated;
-        /* Safari seems to support, but seems deprecated and does the same thing as the others. */
-        image-rendering: -webkit-optimize-contrast;
         object-fit: cover;
+        border-radius: 5px 5px 0px 0px;
+
 
     }
 
@@ -517,10 +525,10 @@ body {
     text-align: center;
     width: 30%;
     min-width: 300px;
-    box-shadow: 1px 2px 13px 2px rgba(0, 0, 0, 0.15);
     margin: 34px 0px;
     padding: 30px;
     height: 500px;
+    border-radius: 5px;
 
     img {
         width: 70%;
@@ -542,26 +550,29 @@ body {
     width: 100%;
     padding: 100px 0px;
     background: #fafafa;
+    
 }
 
 .tour-discover {
-    background-color: #ffffff;
+   background-color: #ffffff;
     width: 80%;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
     justify-content: space-between;
+    box-shadow: 5px 10px 18px #88888865;
+    min-width: 350px;
 }
- 
 
 .discover-image {
     width: 50%;
-    min-width: 350px;
+    min-width: 400px;
     display: flex;
     flex-wrap: wrap;
+    //background: yellow;
 
     img {
-        width: 46%;
+        width: 45%;
         height: 200px;
         object-fit: cover;
         margin: 5px;
@@ -569,19 +580,25 @@ body {
 }
 
 .discover-info {
-    background: rgb(255, 255, 255);
+    //background: rgb(190, 14, 14);
     display: flex;
+    max-width: 400px;
     align-items: center;
     justify-content: space-between;
-    width: 46%;
-    min-width: 340px;
+    min-width: 50%;
 
     .todo-heading{
         color: black;
         font-size: 2em;
-        width: 350px;
     }
 }
+
+.discover-heading-button {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    // background: blueviolet;
+}
+
 
 // tour show //
 
@@ -635,6 +652,11 @@ body {
     padding-top: 20px;
 }
 
+
+#show-tour-description::-webkit-scrollbar {
+    display: none;
+}
+
 .tour-region {
     font-size: 2em;
     color: #75C093;
@@ -648,6 +670,10 @@ body {
     overflow-y: scroll;
 }
 
+.description-text::-webkit-scrollbar {
+    display: none;
+}
+
 .tour-show-btn-wrapper {
     padding: 10px 0px;
 }
@@ -658,6 +684,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 5px;
+    margin-top: 20px;
     
 }
 
@@ -768,12 +795,11 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    margin-top: 20px;
-
     h1 {
         font-weight: 400;        
         font-size: 25px;
         margin-right: 15px;
+        color: #ED6749;
     }
 
     p {
@@ -782,14 +808,12 @@ body {
     } 
 }
 
-.itinerary-number {
-    color: #F47559;
+@media(max-width: 999px) {
+    .itinerary-wrapper {
+        padding: 50px;
+    }
 }
 
-.tour-map {
-    width: 400px;
-    object-fit: cover;
-}
 
 footer {
     background-color: #381A31;
@@ -986,71 +1010,70 @@ footer {
 .stay-wrapper{
     width: 80%;
     margin: auto;
+    box-shadow: 5px 10px 18px #88888865;
+
 
 }
 
 .volta-house {
     width: 50%;
     min-width: 300px;
-    height: 500px;
+    height: 400px;
     object-fit: cover;
     float: left;
-    box-shadow: 3px 0px 10px 0px rgba(129, 128, 128, 0.849);
+    object-position: 0% 0px;
+
 
 }
 
 .volta-house-info {
     background: rgb(255, 255, 255);
-    height: 500px;
+    height: 400px;
     width: 50%;
     float: right;
     display: flex;
     align-items: center;
     padding: 20px;  
-    box-shadow: 3px 0px 10px 0px rgba(129, 128, 128, 0.849);
 
 }
 
 .oasis-house {
     width: 50%;
     min-width: 300px;
-    height: 500px;
+    height: 400px;
     object-fit: cover;
     float: left;
+    
 
 }
 
 .oasis-house-info {
-   height: 500px;
-   width: 50%;
+    height: 400px;
+    width: 50%;
     float: left;
     display: flex;
     align-items: center;
     padding: 20px;
     background: rgb(255, 255, 255);
-    box-shadow: 3px 0px 10px 0px rgba(129, 128, 128, 0.849);
 
 }
 
 .kokrobite-house {
     width: 50%;
     min-width: 300px;
-    height: 500px;
+    height: 400px;
     object-fit: cover;
     float: right;
-
-
 }
 
 .kokrobite-house-info {
-    height: 500px;
+    height: 400px;
     width: 50%;
     float: left;
     display: flex;
     align-items: center;
     padding: 20px;
     background: rgb(255, 255, 255);
-    box-shadow: 0px 00px 03px 00px rgba(129, 128, 128, 0.849);
 
 }
 
@@ -1064,7 +1087,6 @@ footer {
         width: 100%;
         align-items: flex-start;
         height: auto;    
-            box-shadow: 3px 0px 10px 0px rgba(129, 128, 128, 0.849);
 
     }
 
@@ -1074,7 +1096,7 @@ footer {
     }
     .kokrobite-house-info {
         width: 100%;
-        align-items: flex-start;
+        align-items: center;
         height: auto;   
     }
 
