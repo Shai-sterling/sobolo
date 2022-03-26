@@ -523,15 +523,15 @@ body {
 .team {
     background: white;
     text-align: center;
-    width: 30%;
+    width: 31%;
     min-width: 300px;
-    margin: 34px 0px;
-    padding: 30px;
+    margin: 20px 0px;
+    padding: 20px;
     height: 500px;
     border-radius: 5px;
 
     img {
-        width: 70%;
+        width: 50%;
     }
 
     .team-name {
@@ -572,8 +572,8 @@ body {
     //background: yellow;
 
     img {
-        width: 45%;
-        height: 200px;
+        width: 40%;
+        height: 150px;
         object-fit: cover;
         margin: 5px;
     }
@@ -814,7 +814,6 @@ body {
     }
 }
 
-
 footer {
     background-color: #381A31;
     color: white;
@@ -834,7 +833,7 @@ footer {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
- }
+}
 
 .contactus { 
     line-height: 26px;
@@ -1021,8 +1020,6 @@ footer {
     height: 400px;
     object-fit: cover;
     float: left;
-    object-position: 0% 0px;
-
 
 }
 
