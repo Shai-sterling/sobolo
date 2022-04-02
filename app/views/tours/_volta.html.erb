@@ -2,7 +2,7 @@
     <% if @tour.name == "volta" %>
         <div class="itinerary-wrapper">
             <div class="tour-map-wrapper">
-                <%= image_tag "voltamap", class: "tour-map" %>
+                <%= image_tag "voltamap", id: "how-it-works", class: "tour-map"  %>
             </div>
     
             <div class="itinerary-details">
@@ -21,5 +21,22 @@
                 <% end %>
             </div>
         </div>
+
+
+        <div class="site-pics-wrapper">
+            <div class="site-pics">
+                <%= image_tag "wlifalls", class:"site-pic" %>
+                <%= image_tag "cuddle-monkey", class:"site-pic" %>
+                <%= image_tag "monkey-king", class:"site-pic" %>
+                <%= image_tag "ferry", class:"site-pic" %>
+            </div>
+        </div>
     <% end %>
 </div>    
+
+
+
+
+
+
+

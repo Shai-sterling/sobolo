@@ -1,0 +1,36 @@
+<% if @tour.name == "Eastern"%>
+    <div class="itinerary">
+        <div class="itinerary-wrapper">
+
+            <div class="tour-map-wrapper">
+                <%= image_tag "eastern-map", class: "tour-map" %>
+            </div>
+
+            <div class="itinerary-details">
+                <% @tour.sites.each do |site| %>
+                    <div class="itinerary-text">
+                        <h1><%= site.id %></h1>
+                        <h1><%= site.name %></h1>
+
+                    <% if user_signed_in? && current_user.admin? %> 
+                        <p style="margin-left:10px;"><%= link_to "edit", edit_tour_site_path(@tour, site) %> </p>
+                        <p style="margin-left:10px;"><%= link_to "delete", [@tour, site], method: :delete, data: { confirm: "are you sure?"} %></p> </p>
+                    <% end %>
+                    
+                        <p style="width: 100%;"><%= site.description %></p>
+                    </div>
+                <% end %>
+            </div>
+        </div>  
+        
+        <div class="site-pics-wrapper">
+            <div class="site-pics">
+                <%#= image_tag "kakum-walk", class:"site-pic" %>
+                <%#= image_tag "cape-coast-castle", class:"site-pic" %>
+                <%#= image_tag "tuk-tuk", class:"site-pic" %>
+                <%#= image_tag "pigs", class:"site-pic" %>
+            </div>
+        </div>
+
+    </div>    
+<% end %>

@@ -5,38 +5,36 @@
         <button class="hero-text-btn"><a href="#find-tours">view tours</a></button>
         <button id="discover-ghana-btn" class="hero-text-btn"><%= link_to "discover Ghana", discover_path %></button>
     </div> 
-
-</div>
-
-<div class="tour-offer">
-    <div class="sustainable-icons">
-        <%= image_tag("loco2.png") %>
-        <h5>Made by locals</h5>
-    </div>
-
-    <div class="sustainable-icons">
-        <%= image_tag("leaf.png") %>
-        <h5>Eco friendly</h5>
-    </div>
-
-    <div class="sustainable-icons">
-        <%= image_tag("fares.png") %>
-        <h5>Transparent fares</h5>
-    </div>
-
-    <div class="sustainable-icons">
-        <%= image_tag("loco.png") %>
-        <h5>Tailored itineraries</h5>
-    </div>
 </div>
 
 
+<div id="tour-offer-wrapper">
+    <div id="tour-offer" class="tour-offer" >
+        <div class="sustainable-icons">
+            <%= image_tag("loco2.png") %>
+            <h5>Made by locals</h5>
+        </div>
+    
+        <div class="sustainable-icons">
+            <%= image_tag("leaf.png") %>
+            <h5>Eco friendly</h5>
+        </div>
+    
+        <div class="sustainable-icons">
+            <%= image_tag("fares.png") %>
+            <h5>Transparent fares</h5>
+        </div>
+    
+        <div class="sustainable-icons">
+            <%= image_tag("loco.png") %>
+            <h5>Tailored itineraries</h5>
+        </div>
+    </div>
+</div>
 
 
-
-
-<section style="width: 100%; background: white;">
-    <div id="find-tours" class="find-tour">
+<section data-controller="show">
+    <div id="find-tours" class="find" data-action="scroll@window->show#showHeadings">
         <%= image_tag "colors.png", alt: "colors" %>
         <p class="adventure">Find your next adventure </p>
         <p class="adventure-text">Our tours are designed for small groups of 4-5 people, so that we can keep them flexible and tailor them for you along the way. </p>
@@ -73,13 +71,8 @@
 </div>
 
 
-
-
-
-
-
-<section style="width: 100%; background: white">
-    <div id="find-team" class="find-team">
+<section data-controller="show">
+    <div id="find-team" class="find" data-target="find">
         <%= image_tag "colors.png", alt: "colors" %>
         <p class="adventure">Meet our team </p>
         <p class="adventure-text">Our tours are designed for small groups of 4-5 people, so that we can keep them flexible and tailor them for you along the way. </p>
@@ -89,7 +82,7 @@
 
 
 
-<section class="team-back" >
+<section class="team-back">
     <div class="team-wrapper">
         <div class="team">
             <%= image_tag"janet" %>
@@ -121,14 +114,15 @@
     </div>
 </section>
 
-<section style="width: 100%; background: white">
-    <div id="find-tours" class="find-tour">
+<section data-controller="show">
+    <div id="find-tours" class="find" >
         <%= image_tag "colors.png", alt: "colors" %>
         <p class="adventure">Discover Ghana</p>
         <p style="margin-top: 10px;">Stretching from the atlantic ocean to the savannah in the north, Ghana has incredibly diverse natural treasures like peaceful beaches by the ocean,  luscious rain forests, monkey sanctuaries, waterfalls and safari reserves. </p>
         <p style="margin-top: 10px;"> Together with its vibrant culture and heritage, welcoming atmoshpere and rich cuisine, Ghana is the perfect destination  if you are looking for adventure, fun and untouched nature.</p>
     </div> 
 </section>
+
 
 <div class="tour-discover-wrapper">
     <div class="tour-discover">

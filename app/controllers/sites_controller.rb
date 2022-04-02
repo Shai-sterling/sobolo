@@ -35,5 +35,4 @@ class SitesController < ApplicationController
     def site_params
         params.require(:site).permit(:name, :description)
     end
-
 end

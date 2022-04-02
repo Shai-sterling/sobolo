@@ -16,7 +16,6 @@
 
 
  
- 
 
 * { 
     margin:0;
@@ -386,37 +385,57 @@ body {
     line-height: 24px;
 }
 
+
+#tour-offer-wrapper {
+    padding: 40px 0px;
+}
 .tour-offer {
     width: 80%;
     display: flex;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
     margin: auto;
-    padding: 40px 0px;
+    //background-color: yellow;
 
-    .sustainable-icons {
+
+}
+.sustainable-icons {
+    text-align: center;
+    
+    img {
+        height: 40px;
+    }
+
+    h5 {
+        font-weight: 500;
         text-align: center;
-
-        img {
-            height: 30px;
-        }
-
-        h5 {
-            font-weight: 500;
-            text-align: center;
-            margin-top: 10px;
-        }
+        margin-top: 10px;
     }
 }
 
+
+//
+
+section {
+    width: 100%;
+    padding: 60px 0px;
+    background: white;
+    
+}
+
+
+
+
 //  Find tours on Index //
 
-.find-tour, .find-team{
+.find {
+    position: relative;
     width: 80%;
-    color: rgb(10, 10, 10);
+    color: rgb(0, 0, 0);
     text-align: center;
     margin: auto;
-    padding: 80px 0px;
+   // background-color: rgb(50, 148, 205);
+    transition: 1s all ease;
 
     img {
         width: 100px;
@@ -426,7 +445,7 @@ body {
     }
    
     .adventure{
-        font-size: 2.4em;
+        font-size: 2.6em;
         color: #ED6749;
         margin-bottom: 15px;
     }
@@ -434,6 +453,15 @@ body {
     .adventure-text {
         line-height: 27px;
     }  
+}
+
+
+.zactive {
+    transform: rotateY(10px);
+    opacity: 1;
+    transition: 1s all ease;
+
+
 }
 
 // Tour container and Cards //
@@ -463,8 +491,6 @@ body {
         height: 300px;   
         object-fit: cover;
         border-radius: 5px 5px 0px 0px;
-
-
     }
 
     #tour-name {  
@@ -621,13 +647,13 @@ body {
 }
 
 .tour-pic { 
-    width: 50%;   
-    min-width: 400px;
-
+    width: 50%;  
+    
     img {
         width: 100%;
-        object-fit: cover;
+        min-width: 400px; 
         height: 400px;
+        object-fit: cover;
 
     }
 }
@@ -640,11 +666,13 @@ body {
 
     .tour-pic { 
         width: 100%;
+        height: 400px;
         img {
             width: 100%;
-            object-fit: cover;
+            height: 400px;
         }
     }
+   
 }
 
 #show-tour-description {
@@ -652,9 +680,7 @@ body {
     min-width: 400px;
     overflow-y: scroll;
     line-height: 24px;   
-    padding-top: 20px;
 }
-
 
 #show-tour-description::-webkit-scrollbar {
     display: none;
@@ -687,8 +713,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 5px;
-    margin-top: 20px;
-    
+    margin-top: 20px;    
 }
 
 .show-tour-detail {
@@ -703,6 +728,21 @@ body {
     }  
 }
 
+
+
+.bookings-wrapper {
+    width: 100%;
+   //background: cornflowerblue;
+
+    padding: 20px 0px;
+    a {
+        text-decoration: none;
+        background: #ff4a21;
+        padding: 10px;
+        font-size: 1.6em;
+        color: rgb(255, 255, 255);
+    }
+}
 @media(max-width: 999px) {
     .show-tour-details {
         width: 300px;
@@ -773,7 +813,7 @@ body {
     min-width: 300px;
 
     .tour-map {
-        width: 100%; 
+        width: 100%;
    
     }
 }
@@ -785,7 +825,7 @@ body {
     justify-content: space-between;
     width: 80%;
     margin: auto;
-    padding: 100px;
+    padding: 90px ;
 }
 
 .itinerary-details {
@@ -798,6 +838,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    margin-top: 20px;
     h1 {
         font-weight: 400;        
         font-size: 25px;
@@ -811,11 +852,54 @@ body {
     } 
 }
 
+
+.site-pics-wrapper {
+    background: white;
+    width: 100%;
+    padding: 50px 0px;
+}
+
+
+.site-pics {
+    width: 80%;
+   background: rgb(255, 255, 255);
+    min-width: 450px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.site-pic {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+@media(max-width: 768px) {
+    .site-pics-wrapper {
+     
+        justify-content: initial;
+        padding: 10px;
+    }
+
+
+    .site-pic {
+        width: 100px;
+        height: 100px;
+       
+    }
+
+}
+
+
 @media(max-width: 999px) {
     .itinerary-wrapper {
         padding: 50px;
     }
 }
+
+
 
 footer {
     background-color: #381A31;
@@ -1076,6 +1160,7 @@ footer {
     background: rgb(255, 255, 255);
 
 }
+
 
 @media(max-width: 750px) {
  
