@@ -963,20 +963,19 @@ footer {
 
 #first-todo-text {
     //border: 1px solid red;
-    box-shadow: 10px 5px 5px  4px blue;
+    box-shadow: 10px 5px 5px  4px rgba(240, 240, 240, 0.945);
 }
 
 .things-todo-wrapper {
     width: 80%;
     margin: auto;
     background-color: #ffffff;
-    overflow-y: scroll;
-    box-shadow: 3px 0px 10px 0px rgba(129, 128, 128, 0.849);
+    box-shadow: 3px 0px 10px 0px rgb(238, 238, 238);
 
 }
 
 .todo-pic {
-    height: 500px;
+    height: 400px;
     width: 50%;
 }
 
@@ -992,7 +991,7 @@ footer {
 }
 
 .todo-info-wrapper {
-    height: 500px;
+    height: 400px;
     width: 50%;
     display: flex;
     align-items: center;
