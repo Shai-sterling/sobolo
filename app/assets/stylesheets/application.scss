@@ -854,7 +854,7 @@ section {
 
 
 .site-pics-wrapper {
-    background: white;
+    background: #ffffff;
     width: 100%;
     padding: 50px 0px;
 }
@@ -863,15 +863,14 @@ section {
 .site-pics {
     width: 80%;
     background: rgb(255, 255, 255);
-    min-width: 450px;
     margin: auto;
     display: flex;
     justify-content: space-between;
+    padding: 30px;
 }
 
 .site-pic {
     width: 20%;
-   
     object-fit: cover;
 }
 
