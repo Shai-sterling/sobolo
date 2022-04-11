@@ -862,33 +862,25 @@ section {
 
 .site-pics {
     width: 80%;
-   background: rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
     min-width: 450px;
     margin: auto;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .site-pic {
-    width: 200px;
-    height: 200px;
+    width: 20%;
+   
     object-fit: cover;
 }
 
 @media(max-width: 768px) {
     .site-pics-wrapper {
-     
         justify-content: initial;
         padding: 10px;
     }
 
-
-    .site-pic {
-        width: 100px;
-        height: 100px;
-       
-    }
 
 }
 
